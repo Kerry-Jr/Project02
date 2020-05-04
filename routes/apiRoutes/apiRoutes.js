@@ -1,7 +1,7 @@
 const router = require('express').Router();
-const todoRoutes = require('./todoRoutes/todoRoutes');
+const blogRoutes = require('./blogRoutes/blogRoutes');
 
 // /api prepended to everyRoute inside of here
-router.use('/todos', todoRoutes);
+router.use('/blogs', blogRoutes);
 
 module.exports = router;

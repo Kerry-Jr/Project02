@@ -1,8 +1,8 @@
 import React, { Component } from 'react';
 
-class TodoCard extends Component {
+class BlogCard extends Component {
   state = {
-    todo: {
+    blog: {
       text: '',
       completed: '',
       id: ''
@@ -23,4 +23,4 @@ class TodoCard extends Component {
   }
 }
 
-export default TodoCard;
+export default BlogCard;

@@ -1,17 +1,15 @@
 import React, { Component } from 'react';
 import { BrowserRouter as Router, Route } from 'react-router-dom';
-import Counter from '../../containers/Counter';
-import TodoForm from '../../containers/TodoForm';
-import TodoCard from '../../containers/TodoCard';
+import BlogForm from '../../containers/BlogForm';
+import BlogCard from '../../containers/BlogCard';
 import Navbar from '../Navbar';
 
 const App = () => (
     <Router>
       <Navbar/>
-      <Route exact path='/' component={TodoForm}/>
-      <Route exact path='/counter' component={Counter}/>
-      <Route exact path='/todos' component={TodoForm}/>
-      <Route exact path='/todos/:todoId' component={TodoCard}/>
+      <Route exact path='/' component={BlogForm}/>
+      <Route exact path='/blogs' component={BlogForm}/>
+      <Route exact path='/blogs/:blogId' component={BlogCard}/>
     </Router>
 );
 export default App;
