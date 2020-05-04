@@ -14,8 +14,8 @@ const Navbar = () => (
         <Link to="/search"> page 3 </Link>
       </li>
     </ul>
-    <Link to='/counter'>Counter</Link>
-    <Link to='/todos'>Todos</Link>
+
+    <Link to='/blogs'>Blogs</Link>
   </div>
 );
 
