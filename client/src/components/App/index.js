@@ -11,11 +11,11 @@ const App = () => {
     return(
 
       <Router>
-        {/* <Navbar/>
+        <Navbar/>
         <Route exact path='/' component={TodoForm}/>
-        <Route exact path='/counter' component={Counter}/>
+        {/* <Route exact path='/counter' component={Counter}/> */}
         <Route exact path='/todos' component={TodoForm}/>
-        <Route exact path='/todos/:todoId' component={TodoCard}/> */}
+        <Route exact path='/todos/:todoId' component={TodoCard}/>
 
         <Basic />
       </Router>
