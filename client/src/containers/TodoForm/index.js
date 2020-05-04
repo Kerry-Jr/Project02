@@ -69,7 +69,7 @@ class TodoForm extends Component {
             value={this.state.todoInput}
             onChange={this.handleInputChange}
           />
-          <button onClick={(e) => this.handleSubmit(e)}>Add todo</button>
+          <button onClick={(e) => this.handleSubmit(e)}>Search</button>
         </form>
       </div>
     );
