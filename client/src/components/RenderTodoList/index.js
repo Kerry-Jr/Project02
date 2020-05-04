@@ -1,13 +1,11 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import PacmanLoader from "react-spinners/PacmanLoader";
+
 
 
 const RenderTodoList = props => {
   const renderTodoListItems = () => {
     if (props.items.length === 0) {
-      return <PacmanLoader/>;
-    } else {
       return props.items.map(todo => {
         return (
           <div key={todo.id}>

@@ -14,4 +14,3 @@ router.route('/:id')
   .patch(todosController.updateTodoCompletedById);
 
 module.exports = router;
-
