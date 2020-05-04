@@ -76,4 +76,4 @@ class TodoForm extends Component {
   }
 }
 
-export default TodoForm;
+export default withRouter(TodoForm);
