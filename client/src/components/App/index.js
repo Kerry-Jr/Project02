@@ -6,6 +6,7 @@ import TodoCard from '../../containers/TodoCard';
 import Navbar from '../Navbar';
 import Basic from './../Basic/Basic.js';
 import PostForm from '../PostForm/';
+import PostFormContainer from '../../containers/PostFormContainer/index.js'
 
 
 const App = () => {
@@ -20,8 +21,7 @@ const App = () => {
 
       {/* <Basic /> */}
 
-      <PostForm />
-      
+      <PostFormContainer />
     </Router>
 
   )
