@@ -4,27 +4,33 @@ import Counter from '../../containers/Counter';
 import TodoForm from '../../containers/TodoForm';
 import TodoCard from '../../containers/TodoCard';
 import Navbar from '../Navbar';
-import Basic from './../Basic/Basic.js';
+import Landing from '../Landing/index.js';
 import PostForm from '../PostForm/';
 import PostFormContainer from '../../containers/PostFormContainer/index.js'
 
 
 const App = () => {
   return (
-
+    <div className="container">
     <Router>
-      {/* <Navbar/>
-        <Route exact path='/' component={TodoForm}/>
-        {/* <Route exact path='/counter' component={Counter}/> */}
-        <Route exact path='/todos' component={TodoForm}/>
-        <Route exact path='/todos/:todoId' component={TodoCard}/>
 
-      {/* <Basic /> */}
+      <Navbar/>
+ 
+
+      {/* <Landing /> */}
 
       <PostFormContainer />
     </Router>
+    </div>
 
   )
 
 };
 export default App;
+       
+
+
+{/* <Route exact path='/' component={TodoForm}/>
+        {/* <Route exact path='/counter' component={Counter}/> */}
+        {/* <Route exact path='/todos' component={TodoForm}/>
+        // <Route exact path='/todos/:todoId' component={TodoCard}/> */} 
