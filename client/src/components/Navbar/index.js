@@ -25,7 +25,7 @@ const Navbar = () => (
                       Time Waster
                       </Link>
                     <div className="dropdown-menu" aria-labelledby="navbarDropdown">
-                      <Link className="dropdown-item" to="#">Pokemon Game</Link>
+                      <Link className="dropdown-item" to="/pokedex">Pokemon Game</Link>
                       <Link className="dropdown-item" to="#">Guess the magic number</Link>
                       <div className="dropdown-divider"></div>
                       <Link className="dropdown-item" to="#"></Link>
