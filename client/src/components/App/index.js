@@ -24,10 +24,3 @@ const App = () => {
 
 };
 export default App;
-       
-
-
-{/* <Route exact path='/' component={TodoForm}/>
-        {/* <Route exact path='/counter' component={Counter}/> */}
-        {/* <Route exact path='/todos' component={TodoForm}/>
-        // <Route exact path='/todos/:todoId' component={TodoCard}/> */} 

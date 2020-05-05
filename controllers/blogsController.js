@@ -13,7 +13,7 @@ module.exports = {
   addBlog: async (req, res) => {
     const { text } = req.body;
     if (!text) {
-      return res.json({ error: 'You must provide text for blogs '});
+      return res.json({ error: 'You must provide text for blogs ' });
     }
     try {
       const [response] = await connection.query(blogQueries.addBlog, { text });

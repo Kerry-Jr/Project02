@@ -5,6 +5,6 @@ CREATE TABLE blogs(
 	id INT AUTO_INCREMENT NOT NULL,
     author VARCHAR (30) NOT NULL,
     dates DATE,
-    text VARCHAR(50) NOT NULL,
+    text VARCHAR(450) NOT NULL,
     PRIMARY KEY(id)
 );
