@@ -11,11 +11,12 @@ class Landing extends Component {
 
         <div>
           <div className="jumbotron">
-            <h1 className="display-4">Hello, world!</h1>
-            <p className="lead">This is a simple hero unit, a simple jumbotron-style component for calling extra attention to featured content or information.</p>
+            <h1 className="display-4">Procrastinator Paradise Blog</h1>
+            <p className="lead">Tell us all about how you are coping with the great quarantine of 2020 </p>
             <hr className="my-4" />
             <p>It uses utility classes for typography and spacing to space content out within the larger container.</p>
             <Link to="/post" className="btn btn-primary btn-lg" role="button">Post</Link>
+            <Link to="/view" className="btn btn-primary btn-lg ml-3" role="button">View</Link>
           </div>
         </div>
 
