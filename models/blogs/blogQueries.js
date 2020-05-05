@@ -7,7 +7,7 @@ const findBlogById = 'SELECT * FROM blogs WHERE id  = ?;';
 
 
 // Adding Blogs
-const addBlog = 'INSERT INTO blogs SET ?;';
+const addBlog = 'INSERT INTO blogs (author, dates, text) VALUES (?, ?, ?);';
 
 
 // Deleting Blogs
