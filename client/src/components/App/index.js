@@ -7,7 +7,7 @@ import Pokedex from '../../containers/Pokedex'
 import PostFormContainer from '../../containers/PostFormContainer/index.js'
 
 
-import PostFormContainer from '../../containers/PostFormContainer/index.js';
+
 import ViewPosts from './../ViewPosts/ViewPosts'
 
 
