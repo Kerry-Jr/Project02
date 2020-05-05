@@ -3,7 +3,8 @@ USE blogs_db;
 
 CREATE TABLE blogs(
 	id INT AUTO_INCREMENT NOT NULL,
+    author VARCHAR (30) NOT NULL,
+    dates DATE,
     text VARCHAR(50) NOT NULL,
-    completed BOOLEAN DEFAULT false,
     PRIMARY KEY(id)
 );
