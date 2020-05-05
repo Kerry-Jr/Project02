@@ -1,11 +1,14 @@
 import React, { Component } from 'react';
 import PostForm from '../../components/PostForm';
+import axios from 'axios';
 
 class PostFormContainer extends Component {
   state = {
     name: '',
+    blogs: [],
     textbox: '',
   }
+
 
   // handleInputChange function
   handleInputChange = event => {
@@ -17,21 +20,42 @@ class PostFormContainer extends Component {
     this.setState({ [name] : value });
   }
 
-  // handleFormButton function (THIS IS THE SUBMIT BUTTON)
+  // handleFormSubmit function (THIS IS THE SUBMIT BUTTON)
   // NEXT STEP: this function should take all the info and add it to the database
-  handleFormSubmit = event => {
+  handleFormSubmit = async event => {
     event.preventDefault();
     // this.state.name is what the user types in the name box.
     // this.state.textbox is what the user types in the text box.
-    console.log(this.state.name);
-    console.log(this.state.textbox);
-    alert("You clicked the button!");
+    // console.log(this.state.name);
+    // console.log(this.state.textbox);
+    console.log("You clicked the button!");
     // clear out the input box and textbox after the user clicks submit
-    this.setState({ name: ''});
-    this.setState({ textbox: ''});
+    try {
+      const { data } = await axios.post('/api/blogs', { text: this.state.textbox, author: this.state.name });
+      const blogs = [...this.state.blogs, data];
+      this.setState({ blogs, textbox: '' });
+      this.setState({ name: ''});
+    } catch (e) {
+      console.log(e);
+    }
+    // this.setState({ name: ''});
+    // this.setState({ textbox: ''});
   }
 
+  // TEMPLATE FOR FORM SUBMIT
+  // handleSubmit = async event => {
+  //   event.preventDefault();
+  //   try {
+  //     const { data } = await axios.post('/api/blogs', {text: this.state.blogInput });
+  //     const blogs = [...this.state.blogs, data];
+  //     this.setState({ blogs, blogInput: '' });
+  //   } catch (e) {
+  //     console.log(e);
+  //   }
+  // }
+
   // NEXT STEP:  Create a function that makes a request to the database
+
 
   render() {
     return (
