@@ -2,7 +2,7 @@ import React from 'react';
 
 function PostForm(props) {
   return (
-    <div>
+    <div className="container">
       <form>
         {/* Name input box */}
         <div className="form-group">

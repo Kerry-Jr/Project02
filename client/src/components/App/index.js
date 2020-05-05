@@ -14,7 +14,7 @@ import ViewPosts from './../ViewPosts/ViewPosts'
 
 const App = () => {
   return (
-    <div className="container">
+    <div className="container-fluid">
     <Router>
       <Navbar/>
     

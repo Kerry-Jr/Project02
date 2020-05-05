@@ -18,7 +18,6 @@ const updateBlogCompletedById = 'UPDATE blogs SET completed = ? WHERE id = ?;';
 const updateBlogTextById = 'UPDATE blogs SET text = ? WHERE id = ?;';
 
 
-
 module.exports = {
   findAllBlogs,
   findAllCompleted,
