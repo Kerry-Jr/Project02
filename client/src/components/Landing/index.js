@@ -16,12 +16,7 @@ class Landing extends Component {
             <hr className="my-4" />
             <p>It uses utility classes for typography and spacing to space content out within the larger container.</p>
             <Link to="/post" className="btn btn-primary btn-lg" role="button">Post</Link>
-<<<<<<< Updated upstream
-           
-          
-=======
             <Link to="/view" className="btn btn-primary btn-lg ml-3" role="button">View</Link>
->>>>>>> Stashed changes
           </div>
         </div>
 
