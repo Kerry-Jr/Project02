@@ -1,3 +1,4 @@
+const moment = require('moment');
 const connection = require('../config/connection');
 const blogQueries = require('../models/blogs/blogQueries');
 
@@ -11,15 +12,18 @@ module.exports = {
     }
   },
   addBlog: async (req, res) => {
-    const { text } = req.body;
-    if (!text) {
+    const { text, author } = req.body;
+    const date = moment().format();
+    const dataArr = [author, date, text];
+    if (!text || !author) {
       return res.json({ error: 'You must provide text for blogs ' });
     }
     try {
-      const [response] = await connection.query(blogQueries.addBlog, { text });
+      const [response] = await connection.query(blogQueries.addBlog, dataArr);
       const [blogs] = await connection.query(blogQueries.findBlogById, response.insertId);
       return res.json(blogs[0]);
     } catch (e) {
+      console.log(e);
       return res.status(403).json({ e });
     }
   },
