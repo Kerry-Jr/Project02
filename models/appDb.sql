@@ -8,3 +8,10 @@ CREATE TABLE blogs(
     text VARCHAR(450) NOT NULL,
     PRIMARY KEY(id)
 );
+
+CREATE TABLE comments(
+	id INT AUTO_INCREMENT NOT NULL,
+    blogId INT NOT NULL,
+    text VARCHAR(100) NOT NULL,
+    PRIMARY KEY(id)
+);

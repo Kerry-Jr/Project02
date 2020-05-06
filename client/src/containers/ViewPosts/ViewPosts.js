@@ -26,10 +26,11 @@ class ViewPosts extends Component {
     }
   }
 
-  handleUpdateCompletedBlog = async id => {
+  handleUpdateText = async id => {
+    console.log(id);
     try {
-      const { data } = await axios.patch(`/api/blogs/${id}`);
-      this.setState({ blogs: data });
+      const { data } = await axios.patch(`/api/blogs/${id}`, { text: this.state.blogInput });
+      this.setState({ blog: data, inputText: '' });
     } catch (e) {
       console.log(e);
     }
@@ -44,7 +45,7 @@ class ViewPosts extends Component {
       test={this.state.sample}
       items={this.state.blogs}
       handleDelete={this.handleDeleteBlog}
-      handleUpdateCompletedTodo={this.handleUpdateCompletedBlog}/>
+      handleUpdateBlog={this.handleUpdateText}/>
       <p>Demo post</p>
 
     </div>

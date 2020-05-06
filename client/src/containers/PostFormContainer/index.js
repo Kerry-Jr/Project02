@@ -24,10 +24,7 @@ class PostFormContainer extends Component {
   // NEXT STEP: this function should take all the info and add it to the database
   handleFormSubmit = async event => {
     event.preventDefault();
-    // this.state.name is what the user types in the name box.
-    // this.state.textbox is what the user types in the text box.
-    // console.log(this.state.name);
-    // console.log(this.state.textbox);
+   
     console.log("You clicked the button!");
     // clear out the input box and textbox after the user clicks submit
     try {
