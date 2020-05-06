@@ -13,7 +13,7 @@ const RenderBlogList = props => {
           <div key={blog.id}>
             <Link to={`/blogs/${blog.id}`}><li >{blog.text}</li></Link>
             <button onClick={ () => props.handleDelete(blog.id) }>Delete</button>
-            <button onClick={ () => props.handleUpdateCompletedBlog(blog.id) }>Update</button>
+            <Link to={`/edit/${blog.id}` }>Edit</Link>
           </div>
         )
       });

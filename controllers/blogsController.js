@@ -46,15 +46,18 @@ module.exports = {
       res.status(403).json({ e });
     }
   },
-  updateBlogCompletedById: async (req, res) => {
+  updateBlogTextById: async (req, res) => {
     const { id } = req.params;
+    const { text } = req.body;
+    console.log(id)
+    console.log(text)
     try {
-      const [blogs] = await connection.query(blogQueries.findBlogById, id);
-      const foundblog = blogs[0];
-      await connection.query(blogQueries.updateblogCompletedById, [!foundblog.completed, id]);
-      const [allblogs] = await connection.query(blogQueries.findAllBlogs);
-      res.json(allblogs);
+      await connection.query(blogQueries.updateBlogTextById, [text, id]);
+      const [blog] = await connection.query(blogQueries.findBlogById, id); // <---- getting an array back with one array insde of it
+      const foundBlog = blog[0];
+      res.json(foundBlog);
     } catch (e) {
+      console.log("ggr")
       res.status(403).json({ e });
     }
   },

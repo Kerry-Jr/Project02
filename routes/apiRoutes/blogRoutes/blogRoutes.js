@@ -11,6 +11,6 @@ router.route('/')
 router.route('/:id')
   .get(blogsController.getBlogById)
   .delete(blogsController.deleteBlogById)
-  .patch(blogsController.updateBlogCompletedById);
+  .patch(blogsController.updateBlogTextById);
 
 module.exports = router;
