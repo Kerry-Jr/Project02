@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import { BrowserRouter as Router, Route } from 'react-router-dom';
 import Navbar from '../Navbar';
 import Landing from '../Landing/index.js';
-
+import './../../components/Landing/style.css'
 import Pokedex from '../../containers/Pokedex'
 import PostFormContainer from '../../containers/PostFormContainer/index.js'
 
@@ -16,7 +16,7 @@ const App = () => {
   return (
     <div className="container-fluid">
     <Router>
-      <Navbar/>
+      <Navbar />
     
       {/* <PostFormContainer /> */}
 

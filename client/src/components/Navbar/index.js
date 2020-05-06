@@ -3,11 +3,11 @@ import { Link } from 'react-router-dom';
 import './../Landing/style.css'
 const Navbar = () => (
   <div>
-   <div className='container'>
+   <div className='container-fluid'>
         <div className='row no-gutters'>
           <div className='col-12'>
-            <nav className="navbar navbar-expand-lg navbar-dark bg-dark">
-              <Link className="navbar-brand" to="#">Blogtastic</Link>
+            <nav className="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
+              <Link className="navbar-brand" to="#">chronicle</Link>
               <button className="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
                 <span className="navbar-toggler-icon"></span>
               </button>
@@ -32,7 +32,7 @@ const Navbar = () => (
                     </div>
                   </li>
                   <li className="nav-item">
-                    <Link className="nav-link" to="#" tabindex="-1" aria-disabled="true">Disabled</Link>
+                    <Link className="nav-link" to="#" tabIndex="-1" aria-disabled="true">Disabled</Link>
                   </li>
                 </ul>
                 <form className="form-inline my-2 my-lg-0">

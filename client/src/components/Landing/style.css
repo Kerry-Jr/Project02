@@ -1,13 +1,53 @@
-.blogspot {
-  width: 100%;
-  height: 100%;
-  color: red;
+body {
+  background-color: rgb(255, 255, 255);
 }
 
-.jumbotron{
-  background-image: url('https://images.unsplash.com/photo-1488190211105-8b0e65b80b4e?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1350&q=80');
+.navbar {
+  background-color: rgb(39, 41, 39) !important;
+  
+ 
+}
+
+.hero-image {
+  background: linear-gradient( rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),url('https://images.unsplash.com/photo-1500989145603-8e7ef71d639e?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1355&q=80');
+  height: 80rem;
   background-size: cover;
-  height: 50rem;
+  opacity: 79%;
+  border-radius: 2rem;
+  margin-top: 8rem;
+  
+}
+
+.hero-text {
+  text-align: center;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
   color: whitesmoke;
 }
+
+.btn {
+background-color: rgb(8, 118, 245) !important;
+border-radius: 2rem;
+color: white;
+border-color: whitesmoke;
+}
+
+.top-form {
+  margin-top: 5rem;
+}
+
+.bg-img {
+  background-image: url(https://images.unsplash.com/photo-1485498128961-422168ba5f87?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=2002&q=80);
+  background-size: cover;
+  height: 80rem;
+  background-size: cover;
+  opacity: 90%;
+  border-radius: 2rem;
+  margin-top: 7.5rem;
+  position: -webkit-sticky;
+}
+
+
 

@@ -1,6 +1,8 @@
 import React, { Component } from 'react';
 import RenderBlogList from '../../components/RenderBlogList'
 import axios from 'axios';
+import DisplayPost from './../../components/DisplayPost';
+
 
 class ViewPosts extends Component {
   state = {
@@ -46,6 +48,8 @@ class ViewPosts extends Component {
       handleDelete={this.handleDeleteBlog}
       handleUpdateCompletedTodo={this.handleUpdateCompletedBlog}/>
       <p>Demo post</p>
+      <DisplayPost />
+
 
     </div>
 
