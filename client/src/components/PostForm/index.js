@@ -1,39 +1,40 @@
 import React from 'react';
+import './../Landing/style.css';
 
 function PostForm(props) {
   return (
-    <div>
-      <form>
+    <div className="container-fluid bg-img">
+    <div className="container">
+      <form className="top-form">
         {/* Name input box */}
         <div className="form-group">
-          <label for="exampleFormControlInput1">Name</label>
+          <label className="formfont">Name</label>
           <input
             name="name"
-            value={props.value.name} 
+            value={props.author} 
             onChange={props.handleInputChange}
             type="text" 
             className="form-control" 
-            id="exampleFormControlInput1" 
             placeholder="Enter your name." 
           />
         </div>
 
         {/* Text input box */}
         <div className="form-group">
-          <label for="exampleFormControlTextarea1">How are you staying sane in quarantine?</label>
+          <label>How are you staying sane in quarantine?</label>
           <textarea
             name="textbox"
-            value={props.value.textbox}
+            value={props.blognote}
             onChange={props.handleInputChange}
             className="form-control" 
-            id="exampleFormControlTextarea1" 
-            rows="3" 
+            rows="10" 
             placeholder="Keep it clean!">
           </textarea>
         </div>
 
-        <button onClick={props.handleFormSubmit} type="button" className="btn btn-secondary btn-lg">Submit</button>
+        {/* <button onClick={()=> props.handleFormSubmit} type="button" className="btn btn-secondary btn-lg">Submit</button> */}
       </form>
+    </div>
     </div>
   );
 }
