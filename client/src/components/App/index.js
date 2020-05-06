@@ -8,7 +8,7 @@ import PostFormContainer from '../../containers/PostFormContainer/index.js'
 
 
 
-import ViewPosts from './../ViewPosts/ViewPosts'
+import ViewPosts from '../../containers/ViewPosts/ViewPosts'
 
 
 

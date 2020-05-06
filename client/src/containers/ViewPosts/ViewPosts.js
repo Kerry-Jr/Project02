@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import RenderBlogList from '../RenderBlogList'
+import RenderBlogList from '../../components/RenderBlogList'
 import axios from 'axios';
 
 class ViewPosts extends Component {
