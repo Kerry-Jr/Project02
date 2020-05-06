@@ -1,19 +1,19 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
+import BlogCardBoot from '../BlogCardBoot'
 
 
 
 const RenderBlogList = props => {
   const renderBlogListItems = () => {
+    console.log(props)
     if (props.items.length === 0) {
         return <h1>No blogs yet</h1>;
       } else {
       return props.items.map(blog => {
         return (
           <div key={blog.id}>
-            <Link to={`/blogs/${blog.id}`}><li >{blog.text}</li></Link>
-            <button onClick={ () => props.handleDelete(blog.id) }>Delete</button>
-            <Link to={`/edit/${blog.id}` }>Edit</Link>
+            <BlogCardBoot name={blog.name} text={blog.text} author={blog.author} title={blog.title} image={blog.image} handleDelete={props.handleDelete} handleUpdateCompletedBlog={props.handleUpdateBlog}/>
           </div>
         )
       });
