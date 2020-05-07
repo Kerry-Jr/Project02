@@ -5,7 +5,9 @@ import NewPostModal from '../NewPostModal';
 import NewPostToggle from '../NewPostToggle';
 import EditPostModal from '../EditPostModal';
 import EditPostToggle from '../EditPostToggle';
-
+import Container from 'react-bootstrap/Container';
+import Row from 'react-bootstrap/Row';
+import Col from 'react-bootstrap/Col';
 
 class Landing extends Component {
 
@@ -15,9 +17,22 @@ class Landing extends Component {
       <div>
         <div className="hero-image">
           <div className="hero-text">
-            <h1>Hi I am new blog site </h1>
-            <p>and I'm a paragraph tag</p>
-
+            <h1 className="animated fadeIn" id="animated-example">Hi Im a new blog site </h1>
+            <p className="animated fadeIn" id="animated-example">and I'm a paragraph tag</p>
+        <Container>
+          <Row>
+            <Col>
+            <div>
+           <div>
+             in side another div
+           </div>
+            </div>
+            </Col>
+            <Col>
+            I am another column
+            </Col>
+          </Row>
+        </Container>
             <NewPostToggle>
               {({ show, toggle, handleSubmit, handleChange, author, textbox }) => (
                 <NewPostModal show={show} toggle={toggle} handleSubmit={handleSubmit} handleChange={handleChange} author={author} textbox={textbox} />
