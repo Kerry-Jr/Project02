@@ -21,7 +21,7 @@ const Navbar = () => (
                     <Link className="nav-link" to="./">Read New Post</Link>
                   </li>
                   <li className="nav-item">
-                    <Link className="nav-link" to="./../RenderRecipes/index.js">Search Recipes</Link>
+                    <Link className="nav-link" to="/renderRecipes">Search Recipes</Link>
                   </li>
                   <li className="nav-item dropdown">
                     <Link className="nav-link dropdown-toggle" to="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">

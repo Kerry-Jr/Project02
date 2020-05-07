@@ -6,6 +6,7 @@ import './../../components/Landing/style.css'
 import Pokedex from '../../containers/Pokedex'
 import PostFormContainer from '../../containers/PostFormContainer/index.js'
 import BlogCard from '../../containers/BlogUpdateCard'
+import RenderRecipes from '../../components/RenderRecipes'
 // import EditPost from '../EditPost'
 
 import ViewPosts from '../../containers/ViewPosts/ViewPosts'
@@ -25,6 +26,8 @@ const App = () => {
       <Route exact path="/edit/:blogId" component={BlogCard}/>
 
       <Route exact path='/pokedex' component={Pokedex}/>
+      <Route exact path='/renderrecipes' component={RenderRecipes}/>
+
 
       <Route exact path="/view" component={ViewPosts} />
       {/* <Route exact path="/edit/:blogId" component={EditPost}/> */}
