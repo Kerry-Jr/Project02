@@ -26,8 +26,13 @@ class App extends Component {
   }
 
 
+<<<<<<< scott-whitney02
      
       
+=======
+  
+    
+>>>>>>> master
 
 
   
@@ -39,11 +44,11 @@ class App extends Component {
   render() {
     return (
       <Spring
-        // from={{ opacity: 0, marginTop: -500 }}
-        // to={{ opacity: 1, marginTop: 0 }}
+        from={{ opacity: 0, marginTop: -500 }}
+        to={{ opacity: 1, marginTop: 0 }}
         from={{ opacity: 0}}
         to={{ opacity: 1}}
-        config={{ delay: 500, duration: 500}}
+        config={{ delay: 500, duration: 2000}}
       >
   
         {props => (
@@ -57,7 +62,7 @@ class App extends Component {
                 <Route exact path="/" component={Landing} />
                 <Route exact path="/post" component={PostFormContainer} />
                 <Route exact path="/edit/:blogId" component={BlogCard} />
-  
+                <Route exact path='/renderrecipes' component={RenderRecipes}/>
                 <Route exact path='/pokedex' component={Pokedex} />
                 <Route exact path='/renderrecipes' component={RenderRecipes}/>
                 <Route exact path="/view" component={ViewPosts} />

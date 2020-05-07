@@ -1,7 +1,12 @@
 import React from "react";
 import { Link } from "react-router-dom";
+
 import { Container } from 'react-bootstrap';
 import Col from 'react-bootstrap/Col'
+
+import './../../components/Landing/style.css';
+
+
 
 const BlogCardBoot = (props) => {
   return ( 
@@ -9,8 +14,10 @@ const BlogCardBoot = (props) => {
     <div>
       <div className="card" style={{ height: 500}}>
         <div className="card-body d-flex flex-column">
+
           <h5 className="card-title">{props.id}</h5>
           <h6 className="card-subtitle mb-2 text-muted">{props.author}</h6>
+
           <p className="card-text">
             {props.text}
           </p>

@@ -34,7 +34,7 @@ body {
 
 .btn {
   border-radius: 4px;
-  background-color: #f4511e;
+  background-color: slateblue;
   border: solid white;
   color: #FFFFFF;
   text-align: center;
@@ -48,6 +48,9 @@ body {
   
 }
 
+.card {
+  background: url(https://images.unsplash.com/photo-1557682268-e3955ed5d83f?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=486&q=80)!important;
+}
 
 
 .top-form {
@@ -90,4 +93,14 @@ body {
 .fadeIn {
   -webkit-animation-name: fadeIn;
   animation-name: fadeIn;
+}
+
+.blogListItems {
+  margin-top: 5rem;
+  color: whitesmoke;
+}
+
+.card-subtitle {
+  color: whitesmoke;
+  font-family: 'Muli', sans-serif;
 }

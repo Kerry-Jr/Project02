@@ -49,9 +49,15 @@ class ViewPosts extends Component {
     console.log(this.props)
   return (
 
+
     <div>
       <Grid>
     
+
+  
+      
+  
+
       <RenderBlogList
       test={this.state.sample}
       items={this.state.blogs}
