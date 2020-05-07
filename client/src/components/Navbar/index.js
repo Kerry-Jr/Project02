@@ -20,6 +20,9 @@ const Navbar = () => (
                   <li className="nav-item">
                     <Link className="nav-link" to="./">Read New Post</Link>
                   </li>
+                  <li className="nav-item">
+                    <Link className="nav-link" to="./../RenderRecipes/index.js">Search Recipes</Link>
+                  </li>
                   <li className="nav-item dropdown">
                     <Link className="nav-link dropdown-toggle" to="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                       Time Waster
@@ -28,8 +31,7 @@ const Navbar = () => (
                       <Link className="dropdown-item" to="/pokedex">Pokemon Game</Link>
                       <Link className="dropdown-item" to="#">Guess the magic number</Link>
                       <div className="dropdown-divider"></div>
-                      <Link className="dropdown-item" to="#"></Link>
-                    </div>
+                     </div>
                   </li>
                   <li className="nav-item">
                     <Link className="nav-link" to="#" tabIndex="-1" aria-disabled="true">Disabled</Link>
