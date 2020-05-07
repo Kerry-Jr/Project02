@@ -14,7 +14,7 @@ const BlogCardBoot = (props) => {
           </p>
           <div>
         <button class="mt-auto btn btn-primary" rol="button" onClick={ () => props.handleDelete(props.id) }>Delete</button>
-        <button class="mt-auto btn btn-primary" rol="button" onClick={ () => props.handleUpdateCompletedBlog(props.id) }>Update</button>
+        <button class="mt-auto btn btn-primary" rol="button" onClick={ () => props.handleUpdateBlog(props.id) }>Update</button>
         {/* <Link to={`/blogs/${props.id}`}><li >{props.date}</li></Link> */}
           </div>
         </div>

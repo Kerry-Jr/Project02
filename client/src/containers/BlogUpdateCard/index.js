@@ -25,9 +25,9 @@ class BlogCard extends Component {
     this.setState({ [name]: value })
   }
 
-  handleUpdateText = async event => {
+  handleUpdateText = async () => {
     try {
-      const { data } = await axios.patch(`/api/blogs/${this.props.match.params.blogId}`, { text: this.state.inputText }); // <get data from back end
+      const { data } = await axios.patch(`/api/blogs/${this.props.match.params.blogId}`, { text: this.state.blogInput }); // <get data from back end
       this.setState({ blog: data, text: '' });
     } catch (e) {
       console.log(e);
