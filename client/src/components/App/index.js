@@ -6,6 +6,7 @@ import './../../components/Landing/style.css'
 import Pokedex from '../../containers/Pokedex'
 import PostFormContainer from '../../containers/PostFormContainer/index.js'
 import BlogCard from '../../containers/BlogUpdateCard'
+import RenderRecipes from '../../components/RenderRecipes'
 // import EditPost from '../EditPost'
 
 import ViewPosts from '../../containers/ViewPosts/ViewPosts'
@@ -24,10 +25,16 @@ class App extends Component {
     showComponent3: false
   }
 
+
+      <Route exact path='/pokedex' component={Pokedex}/>
+      <Route exact path='/renderrecipes' component={RenderRecipes}/>
+
+
   
   // this function isn't connected for some reason
   // toggle = e => this.setState({ showComponent3: !this.state.showComponent3 });
   
+
 
   render() {
     return (
