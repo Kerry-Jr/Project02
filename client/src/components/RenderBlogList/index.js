@@ -13,7 +13,7 @@ const RenderBlogList = props => {
       return props.items.map(blog => {
         return (
           <div key={blog.id}>
-            <BlogCardBoot name={blog.name} text={blog.text} author={blog.author} title={blog.title} image={blog.image} handleDelete={props.handleDelete} handleUpdateCompletedBlog={props.handleUpdateBlog}/>
+            <BlogCardBoot name={blog.name} text={blog.text} author={blog.author} title={blog.title} image={blog.image} handleDelete={props.handleDelete} handleUpdateCompletedBlog={props.handleUpdateBlog} id={blog.id}/>
           </div>
         )
       });

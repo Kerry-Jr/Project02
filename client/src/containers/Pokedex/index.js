@@ -68,6 +68,7 @@ class Pokedex extends Component {
     return (
       <div>
         <form>
+          <h1>Pokemon</h1>
           <input
           name="pokemonInput"
           value={this.state.pokemonInput}
