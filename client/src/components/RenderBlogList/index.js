@@ -1,6 +1,7 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import BlogCardBoot from '../BlogCardBoot'
+import './../../components/Landing/style.css';
 
 
 
@@ -12,6 +13,7 @@ const RenderBlogList = props => {
       } else {
       return props.items.map(blog => {
         return (
+      
           <div key={blog.id}>
             <BlogCardBoot 
             name={blog.name}
@@ -23,12 +25,13 @@ const RenderBlogList = props => {
             handleUpdateBlog={() => props.handleUpdateBlog(blog.id)}
             />
           </div>
+        
         )
       });
     }
   }
   return (
-    <ul>
+    <ul className="blogListItems">
       { renderBlogListItems() }
     </ul>
   );

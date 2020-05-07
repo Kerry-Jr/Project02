@@ -1,5 +1,6 @@
 import React from "react";
 import { Link } from "react-router-dom";
+import './../../components/Landing/style.css';
 
 
 const BlogCardBoot = (props) => {
@@ -8,7 +9,7 @@ const BlogCardBoot = (props) => {
       <div className="card" style={{ height: 500}}>
         <div className="card-body d-flex flex-column">
           <h5 className="card-title">{props.title}</h5>
-          <h6 className="card-subtitle mb-2 text-muted">{props.author}</h6>
+          <h6 className="card-subtitle mb-2">{props.author}</h6>
           <p className="card-text">
             {props.text}
           </p>

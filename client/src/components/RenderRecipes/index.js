@@ -21,6 +21,7 @@ class RenderRecipes extends Component {
       //      title: data.get('RecipeTitle'),
       //      content: data.get('recipeDetail'),
       //  });
+      console.log('hello');
       console.log(hits);
       this.setState({
         recipeDetail: hits[0],
@@ -37,10 +38,10 @@ class RenderRecipes extends Component {
     console.log(name, value);
     this.setState({ [name]: value });
   };
-  componentDidMount() {
-    console.log("i mounted");
-    // const recipe = this.state.recipeDetail;
-  }
+  // componentDidMount() {
+  //   console.log("i mounted");
+  //   // const recipe = this.state.recipeDetail;
+  // }
   render() {
     return (
       <div className="mt-4">
