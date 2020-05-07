@@ -2,6 +2,10 @@ import React, { Component } from 'react';
 import RenderBlogList from '../../components/RenderBlogList'
 import axios from 'axios';
 import DisplayPost from './../../components/DisplayPost';
+import Grid from 'react-bootstrap/Container';
+import Row from 'react-bootstrap/Row';
+import Col from 'react-bootstrap/Col';
+import './../../components/Landing/style.css';
 
 
 class ViewPosts extends Component {
@@ -41,8 +45,10 @@ class ViewPosts extends Component {
   render(){
     console.log(this.props)
   return (
+
     <div>
-      <h1>This will be the view posts page</h1>
+      <Grid>
+    
       <RenderBlogList
       test={this.state.sample}
       items={this.state.blogs}
@@ -50,9 +56,10 @@ class ViewPosts extends Component {
       handleUpdateBlog={this.handleUpdateText}/>
       <p>Demo post</p>
       <DisplayPost />
-
-
+      
+      </Grid>
     </div>
+
 
   );
     }
