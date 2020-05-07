@@ -1,5 +1,6 @@
 import React from "react";
-import { Link } from "react-router-dom";
+import EditPostModal from "../EditPostModal"
+import EditPostToggle from "../EditPostToggle"
 
 
 const BlogCardBoot = (props) => {
@@ -14,7 +15,11 @@ const BlogCardBoot = (props) => {
           </p>
           <div>
         <button class="mt-auto btn btn-primary" rol="button" onClick={ () => props.handleDelete(props.id) }>Delete</button>
-        <button class="mt-auto btn btn-primary" rol="button" onClick={ () => props.handleUpdateBlog(props.id) }>Update</button>
+        <EditPostToggle>
+              {({ show, toggle, handleSubmit, handleChange, deletePost, author, textbox }) => (
+                <EditPostModal show={show} toggle={toggle} handleSubmit={handleSubmit} handleChange={handleChange} deletePost={deletePost} author={author} textbox={textbox} />
+              )}
+        </EditPostToggle>
         {/* <Link to={`/blogs/${props.id}`}><li >{props.date}</li></Link> */}
           </div>
         </div>

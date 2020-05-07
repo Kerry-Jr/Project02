@@ -5,9 +5,9 @@ import Landing from '../Landing/index.js';
 import './../../components/Landing/style.css'
 import Pokedex from '../../containers/Pokedex'
 import PostFormContainer from '../../containers/PostFormContainer/index.js'
-import BlogCard from '../../containers/BlogUpdateCard'
-// import EditPost from '../EditPost'
 
+// import EditPost from '../EditPost'
+import EditPostModal from '../EditPostToggle'
 import ViewPosts from '../../containers/ViewPosts/ViewPosts'
 
 
@@ -22,7 +22,7 @@ const App = () => {
 
       <Route exact path="/" component={Landing} />
       <Route exact path="/post" component={PostFormContainer} />
-      <Route exact path="/edit/:blogId" component={BlogCard}/>
+      <Route exact path="/edit/:blogId" component={EditPostModal}/>
 
       <Route exact path='/pokedex' component={Pokedex}/>
 
