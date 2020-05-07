@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import RenderBlogList from '../../components/RenderBlogList'
 import axios from 'axios';
 import DisplayPost from './../../components/DisplayPost';
+import './../../components/Landing/style.css';
 
 
 class ViewPosts extends Component {
