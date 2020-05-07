@@ -42,7 +42,8 @@ class ViewPosts extends Component {
   render(){
     console.log(this.props)
   return (
-    <div>
+  
+      <div>
       <h1>This will be the view posts page</h1>
       <RenderBlogList
       test={this.state.sample}
