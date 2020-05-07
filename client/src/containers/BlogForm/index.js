@@ -45,10 +45,10 @@ class BlogForm extends Component {
     }
   }
 
-  handleUpdateCompletedBlog = async id => {
+  handleUpdateText = async event => {
     try {
-      const { data } = await axios.patch(`/api/blogs/${id}`);
-      this.setState({ blogs: data });
+      const { data } = await axios.patch(`/api/blogs/${this.props.match.params.blogId}`, { text: this.state.inputText }); // <get data from back end
+      this.setState({ blog: data, text: '' });
     } catch (e) {
       console.log(e);
     }
@@ -61,7 +61,7 @@ class BlogForm extends Component {
       <div>
         <RenderBlogList
           items={this.state.blogs}
-          handleUpdateCompletedBlog={this.handleUpdateCompletedBlog}
+          handleUpdateBlog={this.handleUpdateCompletedBlog}
           handleDelete={this.handleDeleteBlog}/>
         <form>
           <input

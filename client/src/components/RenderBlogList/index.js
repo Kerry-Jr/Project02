@@ -14,6 +14,7 @@ const RenderBlogList = props => {
       } else {
       return props.items.map(blog => {
         return (
+
               <Col>
                 <div key={blog.id}>
                     <BlogCardBoot name={blog.name} text={blog.text} author={blog.author} title={blog.title} image={blog.image} handleDelete={props.handleDelete} handleUpdateCompletedBlog={props.handleUpdateBlog} id={blog.id}/>

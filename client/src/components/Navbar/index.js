@@ -20,6 +20,9 @@ const Navbar = () => (
                   <li className="nav-item">
                     <Link className="nav-link" to="./">Read New Post</Link>
                   </li>
+                  <li className="nav-item">
+                    <Link className="nav-link" to="/renderRecipes">Search Recipes</Link>
+                  </li>
                   <li className="nav-item dropdown">
                     <Link className="nav-link dropdown-toggle" to="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                       Time Waster
@@ -28,8 +31,7 @@ const Navbar = () => (
                       <Link className="dropdown-item" to="/pokedex">Pokemon Game</Link>
                       <Link className="dropdown-item" to="#">Guess the magic number</Link>
                       <div className="dropdown-divider"></div>
-                      <Link className="dropdown-item" to="#"></Link>
-                    </div>
+                     </div>
                   </li>
                   <li className="nav-item">
                     <Link className="nav-link" to="#" tabIndex="-1" aria-disabled="true">Disabled</Link>
@@ -37,7 +39,7 @@ const Navbar = () => (
                 </ul>
                 <form className="form-inline my-2 my-lg-0">
                   <input className="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search" />
-                  <button className="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
+                  <button className="btn btn-outline-primary my-2 my-sm-0" type="submit">Search</button>
                 </form>
               </div>
             </nav>

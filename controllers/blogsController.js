@@ -41,7 +41,7 @@ module.exports = {
     console.log(id)
     try {
       await connection.query(blogQueries.deleteBlogById, id);
-      const [blogs] = await connection.query(blogQueries.findAllblogs);
+      const [blogs] = await connection.query(blogQueries.findAllBlogs);
       res.json(blogs);
     } catch (e) {
       res.status(403).json({ e });
