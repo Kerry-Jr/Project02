@@ -26,8 +26,13 @@ class App extends Component {
   }
 
 
+<<<<<<< scott-whitney02
+     
+      
+=======
   
     
+>>>>>>> master
 
 
   
@@ -59,7 +64,7 @@ class App extends Component {
                 <Route exact path="/edit/:blogId" component={BlogCard} />
                 <Route exact path='/renderrecipes' component={RenderRecipes}/>
                 <Route exact path='/pokedex' component={Pokedex} />
-  
+                <Route exact path='/renderrecipes' component={RenderRecipes}/>
                 <Route exact path="/view" component={ViewPosts} />
                 {/* <Route exact path="/edit/:blogId" component={EditPost}/> */}
   

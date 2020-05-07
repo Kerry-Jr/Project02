@@ -38,6 +38,7 @@ module.exports = {
   },
   deleteBlogById: async (req, res) => {
     const { id } = req.params;
+    console.log(id)
     try {
       await connection.query(blogQueries.deleteBlogById, id);
       const [blogs] = await connection.query(blogQueries.findAllBlogs);
