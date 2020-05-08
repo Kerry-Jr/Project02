@@ -4,9 +4,9 @@ import axios from 'axios';
 
 class PostFormContainer extends Component {
   state = {
-    name: '',
+    author: '',
     blogs: [],
-    textbox: '',
+    content: '',
   }
 
 
@@ -28,10 +28,10 @@ class PostFormContainer extends Component {
     console.log("You clicked the button!");
     // clear out the input box and textbox after the user clicks submit
     try {
-      const { data } = await axios.post('/api/blogs', { text: this.state.textbox, author: this.state.name });
+      const { data } = await axios.post('/api/blogs', { content: this.state.content, author: this.state.author });
       const blogs = [...this.state.blogs, data];
-      this.setState({ blogs, textbox: '' });
-      this.setState({ name: ''});
+      this.setState({ blogs, content: '', author: '' });
+      
     } catch (e) {
       console.log(e);
     }
@@ -57,7 +57,8 @@ class PostFormContainer extends Component {
   render() {
     return (
       <PostForm 
-        value={this.state}
+        author={this.state.author}
+        content={this.state.content}
         handleInputChange={this.handleInputChange}
         handleFormSubmit={this.handleFormSubmit}
       />

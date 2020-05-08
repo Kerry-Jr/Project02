@@ -4,8 +4,8 @@ import axios from 'axios';
 class NewPostToggle extends Component {
 
   state = {
-    name: '',
-    textbox: '',
+    author: '',
+    content: '',
     show: false
   }
 
@@ -13,8 +13,8 @@ class NewPostToggle extends Component {
     if (this.state.show) {
       this.setState({
         show: !this.state.show,
-        textbox: '', 
-        name: ''
+        content: '', 
+        author: ''
       })
     } else {
       this.setState({
@@ -33,7 +33,7 @@ class NewPostToggle extends Component {
     event.preventDefault();
     console.log("You clicked the button!");
     try {
-      const { data } = await axios.post('/api/blogs', { text: this.state.textbox, author: this.state.name });
+      const { data } = await axios.post('/api/blogs', { content: this.state.content, author: this.state.author });
       console.log(data)
       this.toggle();
     } catch (e) {
@@ -50,8 +50,8 @@ class NewPostToggle extends Component {
           toggle: this.toggle,
           handleSubmit: this.handleFormSubmit,
           handleChange: this.handleInputChange,
-          author: this.state.name,
-          textbox: this.state.textbox
+          author: this.state.author,
+          content: this.state.content
         })}
       </div>
     )

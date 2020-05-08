@@ -13,8 +13,8 @@ body {
   height: 80rem;
   background-size: cover;
   opacity: 79%;
-  border-radius: 2rem;
-  margin-top: 8rem;
+  /* border-radius: 2rem; */
+
   
 }
 
@@ -32,15 +32,17 @@ body {
   font-family: 'Lobster', cursive;
 }
 
-.btn {
-  border-radius: 4px;
+.btn, .cardbtn {
+  border-radius: 50px;
   background-color: slateblue;
   border: solid white;
   color: #FFFFFF;
   text-align: center;
   font-size: 20px;
-  padding: 10px;
+  padding: 5px;
   width: 200px;
+  height: 45px;
+  position: sticky;
   transition: all 0.5s;
   cursor: pointer;
   margin: 5px;
@@ -50,13 +52,17 @@ body {
 
 .card {
   background: url(https://images.unsplash.com/photo-1557682268-e3955ed5d83f?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=486&q=80)!important;
-}
 
+}
 
 .top-form {
   margin-top: 5rem;
 }
-
+.search {
+  width: 100px;
+  font-family: 'Lobster', cursive;
+  
+}
 /* .form-group {
   background-image: url(https://images.unsplash.com/photo-1485498128961-422168ba5f87?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=2002&q=80);
   background-size: cover;
@@ -103,4 +109,28 @@ body {
 .card-subtitle {
   color: whitesmoke;
   font-family: 'Muli', sans-serif;
+}
+
+.container-fluid, .container-lg, .container-md, .container-sm, .container-xl {
+  padding-left: 0px;
+  padding-right: 0px;
+}
+
+.card-text {
+  min-height: 250px;
+  max-height: 500px;
+  color: whitesmoke;
+  white-space: wrap;
+  
+  overflow: hidden;
+  text-overflow: ellipsis;
+  
+}
+
+.modalTitle {
+  font-family: 'Lobster', cursive;
+}
+
+.modalAuthor {
+  
 }

@@ -6,7 +6,7 @@ import Container from 'react-bootstrap/Container';
 import Row from 'react-bootstrap/Row';
 import Col from 'react-bootstrap/Col';
 
-import './../../components/Landing/style.css';
+import './style.css';
 
 
 
@@ -19,33 +19,32 @@ const RenderBlogList = props => {
       } else {
       return props.items.map(blog => {
         return (
-
-
-              <Col>
-                <div key={blog.id}>
+              // <Col span={4}>
+                <div className='blogDiv' key={blog.id}>
                     <BlogCardBoot 
-                    name={blog.name}
-                    text={blog.text} 
                     author={blog.author} 
-                    title={blog.title} 
-                    image={blog.image} 
-                    handleDelete={props.handleDelete}
-                    handleUpdate={props.handleUpdate} 
+                    content={blog.content} 
+                    handleDelete={props.handleDelete} 
+                    // handleUpdateText={props.handleUpdateText} 
                     id={blog.id}
+                    updateBlogs={props.updateBlogs}
                     />
                 </div>
-              </Col>
-
+              // </Col>
+// title={blog.title} image={blog.image}
         )
       });
     }
   }
   return (
 
-    <Row>
-
-      { renderBlogListItems() }
+    <Container fluid className='cardLayout'>
+      <Row>
+        <Col className='blogContainer card-deck' span={9} offset={1}>
+        { renderBlogListItems() }
+        </Col>
       </Row>
+    </Container>
   );
 };
 export default RenderBlogList;

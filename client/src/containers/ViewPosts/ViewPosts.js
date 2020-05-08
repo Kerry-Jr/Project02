@@ -3,7 +3,7 @@ import RenderBlogList from '../../components/RenderBlogList'
 import axios from 'axios';
 import DisplayPost from './../../components/DisplayPost';
 
-import Grid from 'react-bootstrap/Container';
+import Container from 'react-bootstrap/Container';
 import Row from 'react-bootstrap/Row';
 import Col from 'react-bootstrap/Col';
 
@@ -14,11 +14,14 @@ import './../../components/Landing/style.css';
 class ViewPosts extends Component {
   state = {
     blogs: [],
-    blogInput: ''
+    inputText: ''
   }
 
   async componentDidMount() {
     console.log("Inside componentDidMount");
+    this.updateBlogs();
+  }
+  updateBlogs = async () => {
     try {
       const { data } = await axios.get('/api/blogs');
       this.setState({ blogs: data });
@@ -26,7 +29,6 @@ class ViewPosts extends Component {
       console.log(e);
     }
   }
-
   handleDeleteBlog = async id => {
     try {
       const { data } = await axios.delete(`/api/blogs/${id}`);
@@ -36,39 +38,36 @@ class ViewPosts extends Component {
     }
   }
 
-  handleUpdateText = async id => {
-    console.log(id);
-    try {
-      const { data } = await axios.patch(`/api/blogs/${id}`, { text: this.state.blogInput });
-      this.setState({ blogs: data, blogInput: '' });
-    } catch (e) {
-      console.log(e);
-    }
+  // handleUpdateText = async id => {
+  //   console.log(id);
+  //   try {
+  //     const { data } = await axios.patch(`/api/blogs/${id}`, { content: this.state.inputText });
+  //     this.setState({ blogs: data, inputText: '' });
+  //   } catch (e) {
+  //     console.log(e);
+  //   }
+  // }
+
+  render() {
+    console.log(this.state)
+    return (
+     <div>
+        <Container fluid>
+          <Row>
+            <Col span={10} offset={1}>
+              <RenderBlogList
+                test={this.state.sample}
+                items={this.state.blogs}
+                handleDelete={this.handleDeleteBlog}
+                // handleUpdateText={this.handleUpdateText} 
+                updateBlogs={this.updateBlogs}
+              />
+            </Col>
+          </Row>
+        </Container>
+      </div>
+    );
   }
-  
-  render(){
-    console.log(this.props)
-  return (
-
-
-    <div>
-      <Grid>
-
-      <RenderBlogList
-      test={this.state.sample}
-      items={this.state.blogs}
-      handleDelete={this.handleDeleteBlog}
-      handleUpdate={this.handleUpdateText}/>
-      <p>Demo post</p>
-      <DisplayPost />
-      
-      </Grid>
-    </div>
-
-
-  );
-    }
 }
-
 
 export default ViewPosts;
