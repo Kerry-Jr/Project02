@@ -12,10 +12,10 @@ module.exports = {
     }
   },
   addBlog: async (req, res) => {
-    const { text, author } = req.body;
-    const date = moment().format();
-    const dataArr = [author, date, text];
-    if (!text || !author) {
+    const { content, author } = req.body;
+    const postDate = moment().format();
+    const dataArr = [author, postDate, content];
+    if (!content || !author) {
       return res.json({ error: 'You must provide text for blogs ' });
     }
     try {
@@ -49,11 +49,11 @@ module.exports = {
   },
   updateBlogTextById: async (req, res) => {
     const { id } = req.params;
-    const { text } = req.body;
-    console.log(id)
-    console.log(text)
+    const { content } = req.body;
+    console.log(id);
+    console.log(content);
     try {
-      await connection.query(blogQueries.updateBlogTextById, [text, id]);
+      await connection.query(blogQueries.updateBlogTextById, [content, id]);
       const [blog] = await connection.query(blogQueries.findBlogById, id); // <---- getting an array back with one array insde of it
       const foundBlog = blog[0];
       res.json(foundBlog);

@@ -3,7 +3,7 @@ import RenderBlogList from '../../components/RenderBlogList'
 import axios from 'axios';
 import DisplayPost from './../../components/DisplayPost';
 
-import Grid from 'react-bootstrap/Container';
+import Container from 'react-bootstrap/Container';
 import Row from 'react-bootstrap/Row';
 import Col from 'react-bootstrap/Col';
 
@@ -13,7 +13,8 @@ import './../../components/Landing/style.css';
 
 class ViewPosts extends Component {
   state = {
-    blogs: []
+    blogs: [],
+    inputText: ''
   }
 
   async componentDidMount() {
@@ -38,41 +39,31 @@ class ViewPosts extends Component {
   handleUpdateText = async id => {
     console.log(id);
     try {
-      const { data } = await axios.patch(`/api/blogs/${id}`, { text: this.state.blogInput });
+      const { data } = await axios.patch(`/api/blogs/${id}`, { content: this.state.blogInput });
       this.setState({ blog: data, inputText: '' });
     } catch (e) {
       console.log(e);
     }
   }
-  
-  render(){
+
+  render() {
     console.log(this.props)
-  return (
-
-
-    <div>
-      <Grid>
-    
-
-  
-      
-  
-
-      <RenderBlogList
-      test={this.state.sample}
-      items={this.state.blogs}
-      handleDelete={this.handleDeleteBlog}
-      handleUpdateBlog={this.handleUpdateText}/>
-      <p>Demo post</p>
-      <DisplayPost />
-      
-      </Grid>
-    </div>
-
-
-  );
-    }
+    return (
+     <div>
+        <Container fluid>
+          <Row>
+            <Col span={10} offset={1}>
+              <RenderBlogList
+                test={this.state.sample}
+                items={this.state.blogs}
+                handleDelete={this.handleDeleteBlog}
+                handleUpdateBlog={this.handleUpdateText} />
+            </Col>
+          </Row>
+        </Container>
+      </div>
+    );
+  }
 }
-
 
 export default ViewPosts;

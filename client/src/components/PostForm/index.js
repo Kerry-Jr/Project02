@@ -10,7 +10,7 @@ function PostForm(props) {
         <div className="form-group">
           <label className="formfont">Name</label>
           <input
-            name="name"
+            name="author"
             value={props.author} 
             onChange={props.handleInputChange}
             type="text" 
@@ -23,8 +23,8 @@ function PostForm(props) {
         <div className="form-group">
           <label>How are you staying sane in quarantine?</label>
           <textarea
-            name="textbox"
-            value={props.blognote}
+            name="content"
+            value={props.content}
             onChange={props.handleInputChange}
             className="form-control" 
             rows="10" 

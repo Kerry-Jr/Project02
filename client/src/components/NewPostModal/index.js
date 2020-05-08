@@ -14,19 +14,20 @@ class NewPostModal extends Component {
             <div className="form-group">
               <label className="formfont">Name</label>
               <input
-                name="name"
+                name="author"
                 value={this.props.author}
                 onChange={this.props.handleChange}
                 type="text"
                 className="form-control"
                 placeholder="Enter your name."
+
               />
             </div>
             <div className="form-group">
               <label>How are you staying sane in quarantine?</label>
               <textarea
-                name="textbox"
-                value={this.props.textbox}
+                name="content"
+                value={this.props.content}
                 onChange={this.props.handleChange}
                 className="form-control"
                 rows="10"
@@ -36,8 +37,8 @@ class NewPostModal extends Component {
           </form>
         </Modal.Body>
         <Modal.Footer>
-          <button onClick={this.props.toggle} className="btn btn-secondary">Close</button>
-          <button onClick={this.props.handleSubmit} className="btn btn-primary btn-lg ml-3" type="submit">Post</button>
+          <button onClick={this.props.toggle} className="btn btn-secondary cardBtn">Close</button>
+          <button onClick={this.props.handleSubmit} className="btn btn-primary btn-lg ml-3 cardBtn" type="submit">Post</button>
         </Modal.Footer>
       </Modal>
     )
