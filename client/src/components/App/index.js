@@ -25,16 +25,6 @@ class App extends Component {
     showComponent3: false
   }
 
-
-<<<<<<< scott-whitney02
-     
-      
-=======
-  
-    
->>>>>>> master
-
-
   
   // this function isn't connected for some reason
   // toggle = e => this.setState({ showComponent3: !this.state.showComponent3 });
@@ -52,8 +42,8 @@ class App extends Component {
       >
   
         {props => (
-          <div style={props}>
-            <div className="container-fluid App">
+          <div className="container-fluid" style={props}>
+            <div className="container-fluid">
               <Router>
                 <Navbar />
   
