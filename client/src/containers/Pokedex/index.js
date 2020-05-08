@@ -3,6 +3,10 @@ import Axios from 'axios';
 import PokemonCard from "../PokemonCard"
 // import PokemonCard from "../PokemonCard/index"
 // // import Axios from 'axios';
+import Grid from 'react-bootstrap/Container';
+import Row from 'react-bootstrap/Row';
+import Col from 'react-bootstrap/Col';
+import './../../components/Landing/style.css'
 
 class Pokedex extends Component {
   state = {
@@ -66,25 +70,49 @@ class Pokedex extends Component {
     console.log("Rendered inside of counter");
     console.log(this.props);
     return (
-      <div>
+      <div className="pokedexForm">
+        <Grid>
+          <Row>
+            <Col>
         <form>
-          <h1>Pokemon</h1>
-          <h6>lol pushing it down</h6>
-          <input
+
+
+
+        <div class="card text-center">
+  <div class="card-header">
+    Featured
+  </div>
+  <div class="card-body">
+    <h5 class="card-title">Pokedex</h5>
+    <p class="card-text">Enter the name of a Pokemon you want more information on.</p>
+    <input
           name="pokemonInput"
           value={this.state.pokemonInput}
           onChange={this.handleInput}
           />
           {/* <button onClick={(e) => this.handleSubmit(e)}><Link>Look up Pokemon</Link></button> */}
-          <button onClick={(e) => this.handleSubmit(e)}>Look up Pokemon</button>
+          <button class="btn btn-primary" onClick={(e) => this.handleSubmit(e)}>Look up Pokemon</button>
+  </div>
+  <div class="card-footer text-muted">
+  </div>
+</div>
 
+
+
+
+      
         </form>
+        </Col>
+        <Col>
         <div>
         { this.state.pokemonSearched ? <PokemonCard name={this.state.pokemonName} ability={this.state.pokemonAbility} image={this.state.pokemonSpriteShiny} height={this.state.pokemonHeight} stats={this.state.pokemonStats}/> : null }
         </div>
       
         {/* <button onClick={this.props.history.goBack}>Go Back</button>
         <button onClick={ () => this.props.history.push('/todos') }>Go to todos</button> */}
+        </Col>
+        </Row>
+        </Grid>
       </div>
     );
   }
