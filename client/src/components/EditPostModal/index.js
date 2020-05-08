@@ -12,17 +12,6 @@ class EditPostModal extends Component {
         <Modal.Body>
           <form className="top-form">
             <div className="form-group">
-              <label className="formfont">Name</label>
-              <input
-                name="name"
-                value={this.props.author}
-                onChange={this.props.handleChange}
-                type="text"
-                className="form-control"
-                placeholder="Enter your name."
-              />
-            </div>
-            <div className="form-group">
               <label>How are you staying sane in quarantine?</label>
               <textarea
                 name="textbox"
@@ -37,8 +26,8 @@ class EditPostModal extends Component {
         </Modal.Body>
         <Modal.Footer>
           <button onClick={this.props.toggle} className="btn btn-secondary">Close</button>
-          <button onClick={this.props.deletePost} className="btn btn-secondary">Delete Post</button>
-          <button onClick={this.props.handleSubmit} className="btn btn-primary btn-lg ml-3" type="submit">Update</button>
+          <button onClick={this.props.handleDelete} className="btn btn-secondary">Delete Post</button>
+          <button onClick={this.props.handleUpdate} className="btn btn-primary btn-lg ml-3" type="submit">Update</button>
         </Modal.Footer>
       </Modal>
     )
