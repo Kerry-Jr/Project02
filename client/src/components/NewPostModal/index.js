@@ -3,6 +3,7 @@ import Modal from "react-bootstrap/Modal"
 
 class NewPostModal extends Component {
   
+  
   render() {
     return (
       <Modal show={this.props.show} onHide={this.props.toggle}>
@@ -20,7 +21,6 @@ class NewPostModal extends Component {
                 type="text"
                 className="form-control"
                 placeholder="Enter your name."
-
               />
             </div>
             <div className="form-group">
@@ -31,7 +31,8 @@ class NewPostModal extends Component {
                 onChange={this.props.handleChange}
                 className="form-control"
                 rows="10"
-                placeholder="Keep it clean!">
+                placeholder="Keep it clean!"
+              >
               </textarea>
             </div>
           </form>

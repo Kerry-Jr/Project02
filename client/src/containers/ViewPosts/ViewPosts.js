@@ -10,6 +10,9 @@ import Col from 'react-bootstrap/Col';
 
 import './../../components/Landing/style.css';
 
+import './viewPosts.css';
+
+
 
 class ViewPosts extends Component {
   state = {

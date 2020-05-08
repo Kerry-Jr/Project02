@@ -32,13 +32,17 @@ class NewPostToggle extends Component {
   handleFormSubmit = async event => {
     event.preventDefault();
     console.log("You clicked the button!");
-    try {
-      const { data } = await axios.post('/api/blogs', { content: this.state.content, author: this.state.author });
-      console.log(data)
-      this.toggle();
-    } catch (e) {
-      console.log(e);
-    }
+    if(!this.state.author || !this.state.content){
+      alert("Please fill something out.");
+    } else {
+      try {
+        const { data } = await axios.post('/api/blogs', { content: this.state.content, author: this.state.author });
+        console.log(data)
+        this.toggle();
+      } catch (e) {
+        console.log(e);
+      }
+    } 
   }
 
   render() {
