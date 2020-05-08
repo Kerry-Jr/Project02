@@ -10,6 +10,7 @@ class EditPostModal extends Component {
           <Modal.Title>Edit Post</Modal.Title>
         </Modal.Header>
         <Modal.Body>
+          <h4>{this.props.author}</h4>
           <form className="top-form">
             <div className="form-group">
               <label>How are you staying sane in quarantine?</label>
