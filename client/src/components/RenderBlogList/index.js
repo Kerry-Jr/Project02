@@ -21,7 +21,14 @@ const RenderBlogList = props => {
         return (
               // <Col span={4}>
                 <div className='blogDiv' key={blog.id}>
-                    <BlogCardBoot author={blog.author} content={blog.content} handleDelete={props.handleDelete} handleUpdateCompletedBlog={props.handleUpdateBlog} id={blog.id}/>
+                    <BlogCardBoot 
+                    author={blog.author} 
+                    content={blog.content} 
+                    handleDelete={props.handleDelete} 
+                    // handleUpdateText={props.handleUpdateText} 
+                    id={blog.id}
+                    updateBlogs={props.updateBlogs}
+                    />
                 </div>
               // </Col>
 // title={blog.title} image={blog.image}

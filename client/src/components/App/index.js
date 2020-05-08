@@ -9,6 +9,8 @@ import BlogCard from '../../containers/BlogUpdateCard'
 import RenderRecipes from '../../components/RenderRecipes'
 // import EditPost from '../EditPost'
 
+// import EditPost from '../EditPost'
+import EditPostModal from '../EditPostToggle'
 import ViewPosts from '../../containers/ViewPosts/ViewPosts'
 
 // animations example
@@ -24,7 +26,6 @@ class App extends Component {
   state = {
     showComponent3: false
   }
-
   
   // this function isn't connected for some reason
   // toggle = e => this.setState({ showComponent3: !this.state.showComponent3 });
@@ -56,6 +57,7 @@ class App extends Component {
                 <Route exact path='/pokedex' component={Pokedex} />
              
                 <Route exact path="/view" component={ViewPosts} />
+                
                 {/* <Route exact path="/edit/:blogId" component={EditPost}/> */}
   
                 {/* animation components */}
@@ -92,47 +94,5 @@ class App extends Component {
   }
 }
 
-// const App = () => {
-//   return (
-//     <Spring
-//       // from={{ opacity: 0, marginTop: -500 }}
-//       // to={{ opacity: 1, marginTop: 0 }}
-//       from={{ opacity: 0}}
-//       to={{ opacity: 1}}
-//       config={{ delay: 500, duration: 500}}
-//     >
-
-//       {props => (
-//         <div style={props}>
-//           <div className="container-fluid App">
-//             <Router>
-//               <Navbar />
-
-//               {/* <PostFormContainer /> */}
-
-//               <Route exact path="/" component={Landing} />
-//               <Route exact path="/post" component={PostFormContainer} />
-//               <Route exact path="/edit/:blogId" component={BlogCard} />
-
-//               <Route exact path='/pokedex' component={Pokedex} />
-
-//               <Route exact path="/view" component={ViewPosts} />
-//               {/* <Route exact path="/edit/:blogId" component={EditPost}/> */}
-
-//               <Component1 />
-
-//               <Component2 />
-
-//             </Router>
-//           </div>
-//         </div>
-//       )}
-
-//     </Spring>
-
-
-//   )
-
-// };
 
 export default App;

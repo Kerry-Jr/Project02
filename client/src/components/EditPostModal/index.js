@@ -10,18 +10,8 @@ class EditPostModal extends Component {
           <Modal.Title>Edit Post</Modal.Title>
         </Modal.Header>
         <Modal.Body>
+          <h4>{this.props.author}</h4>
           <form className="top-form">
-            <div className="form-group">
-              <label className="formfont">Name</label>
-              <input
-                name='name'
-                value={this.props.author}
-                onChange={this.props.handleChange}
-                type="text"
-                className="form-control"
-                placeholder="Enter your name."
-              />
-            </div>
             <div className="form-group">
               <label>How are you staying sane in quarantine?</label>
               <textarea
@@ -38,7 +28,7 @@ class EditPostModal extends Component {
         <Modal.Footer>
           <button onClick={this.props.toggle} className="btn btn-secondary cardBtn">Close</button>
           <button onClick={this.props.deletePost} className="btn btn-secondary cardBtn">Delete Post</button>
-          <button onClick={this.props.handleSubmit} className="btn btn-primary btn-lg ml-3 cardBtn" type="submit">Update</button>
+          <button onClick={() => this.props.handleUpdate(this.props.id)} className="btn btn-primary btn-lg ml-3 cardBtn" type="submit">Update</button>
         </Modal.Footer>
       </Modal>
     )

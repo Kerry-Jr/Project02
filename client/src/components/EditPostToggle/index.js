@@ -4,6 +4,7 @@ import axios from 'axios';
 class EditPostToggle extends Component {
 
   state = {
+    id: "",
     author: '',
     content: '',
     show: false
@@ -23,10 +24,15 @@ class EditPostToggle extends Component {
     }
   }
 
-  // componentDidMount() {
-  //   // make an axios call to get blog post by id
-  //   // save author to name and bodytext to textbox inside this.state
-  // }
+  componentDidMount() {
+    // make an axios call to get blog post by id
+    // save author to name and bodytext to textbox inside this.state
+    this.setState({
+      author: this.props.author,
+      content: this.props.content,
+      id: this.props.id
+    })
+  }
   
 
   handleInputChange = event => {
@@ -48,11 +54,22 @@ class EditPostToggle extends Component {
     }
   }
 
-  deletePost = event => {
-    // axios call to delete blog entry from db by its id
-    console.log(event);
+  // deletePost = event => {
+  //   // axios call to delete blog entry from db by its id
+  //   console.log(event);
+  // }
+  handleUpdateText = async id => {
+    console.log(id);
+    try {
+      const { data } = await axios.patch(`/api/blogs/${id}`, { content: this.state.content });
+      console.log(data);
+      this.toggle();
+      this.props.updateBlogs();
+      this.setState({ content: data.content, author: data.author, id: data.id });
+    } catch (e) {
+      console.log(e);
+    }
   }
-
   render() {
     return (
       <div>
@@ -60,16 +77,16 @@ class EditPostToggle extends Component {
         {this.props.children({
           show: this.state.show,
           toggle: this.toggle,
-          handleSubmit: this.handleFormSubmit,
+          handleUpdate: this.handleUpdateText,
           handleChange: this.handleInputChange,
           deletePost: this.deletePost,
           author: this.state.author,
-          content: this.state.content
+          content: this.state.content,
+          id: this.state.id
         })}
       </div>
     )
   }
 }
-
 
 export default EditPostToggle;

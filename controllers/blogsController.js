@@ -58,7 +58,7 @@ module.exports = {
       const foundBlog = blog[0];
       res.json(foundBlog);
     } catch (e) {
-      console.log("ggr")
+      console.log("ggr");
       res.status(403).json({ e });
     }
   },

@@ -17,10 +17,8 @@ const BlogCardBoot = (props) => {
     <div>
       <div className="card" style={{ height: 500}}>
         <div className="card-body d-flex flex-column">
-
           <h5 className="card-title">{props.id}</h5>
           <h6 className="card-subtitle mb-2">{props.author}</h6>
-
           <p className="card-text">
             {props.content}
           </p>
@@ -32,15 +30,23 @@ const BlogCardBoot = (props) => {
                 toggle={toggle} 
                 author={props.author} 
                 content={props.content}
-                
                 />
               )}
             </ViewPostToggle>
         <button class="mt-auto btn btn-primary cardbtn" rol="button" onClick={ () => props.handleDelete(props.id) }>Delete</button>
         {/* <button class="mt-auto btn btn-primary cardbtn" rol="button" onClick={ () => props.handleUpdateCompletedBlog(props.id) }>Update</button> */}
-        <EditPostToggle>
-              {({ show, toggle, handleSubmit, handleChange, deletePost, author, content }) => (
-                <EditPostModal show={show} toggle={toggle} handleSubmit={handleSubmit} handleChange={handleChange} deletePost={deletePost} author={author} content={content} />
+        <EditPostToggle content={props.content} author={props.author} id={props.id} updateBlogs={props.updateBlogs}>
+              {({ show, toggle, handleUpdate, handleChange, deletePost, author, content, id }) => (
+                <EditPostModal 
+                show={show} 
+                toggle={toggle} 
+                handleUpdate={handleUpdate} 
+                handleChange={handleChange} 
+                deletePost={deletePost} 
+                author={author} 
+                content={content} 
+                id={id}
+                />
               )}
             </EditPostToggle>
           </div>

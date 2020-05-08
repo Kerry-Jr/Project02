@@ -22,6 +22,9 @@ class ViewPosts extends Component {
 
   async componentDidMount() {
     console.log("Inside componentDidMount");
+    this.updateBlogs();
+  }
+  updateBlogs = async () => {
     try {
       const { data } = await axios.get('/api/blogs');
       this.setState({ blogs: data });
@@ -29,7 +32,6 @@ class ViewPosts extends Component {
       console.log(e);
     }
   }
-
   handleDeleteBlog = async id => {
     try {
       const { data } = await axios.delete(`/api/blogs/${id}`);
@@ -39,18 +41,18 @@ class ViewPosts extends Component {
     }
   }
 
-  handleUpdateText = async id => {
-    console.log(id);
-    try {
-      const { data } = await axios.patch(`/api/blogs/${id}`, { content: this.state.blogInput });
-      this.setState({ blog: data, inputText: '' });
-    } catch (e) {
-      console.log(e);
-    }
-  }
+  // handleUpdateText = async id => {
+  //   console.log(id);
+  //   try {
+  //     const { data } = await axios.patch(`/api/blogs/${id}`, { content: this.state.inputText });
+  //     this.setState({ blogs: data, inputText: '' });
+  //   } catch (e) {
+  //     console.log(e);
+  //   }
+  // }
 
   render() {
-    console.log(this.props)
+    console.log(this.state)
     return (
      <div>
         <Container fluid>
@@ -60,7 +62,9 @@ class ViewPosts extends Component {
                 test={this.state.sample}
                 items={this.state.blogs}
                 handleDelete={this.handleDeleteBlog}
-                handleUpdateBlog={this.handleUpdateText} />
+                // handleUpdateText={this.handleUpdateText} 
+                updateBlogs={this.updateBlogs}
+              />
             </Col>
           </Row>
         </Container>
