@@ -19,18 +19,19 @@ class Landing extends Component {
             <p className="animated fadeIn" id="animated-example">and I'm a paragraph tag</p>
        
             <NewPostToggle>
-              {({ show, toggle, handleSubmit, handleChange, author, textbox }) => (
-                <NewPostModal show={show} toggle={toggle} handleSubmit={handleSubmit} handleChange={handleChange} author={author} textbox={textbox} />
+              {({ show, toggle, handleSubmit, handleChange, author, content }) => (
+                <NewPostModal show={show} toggle={toggle} handleSubmit={handleSubmit} handleChange={handleChange} author={author} content={content} />
               )}
             </NewPostToggle>
 
             <EditPostToggle>
-              {({ show, toggle, handleSubmit, handleChange, deletePost, author, textbox }) => (
-                <EditPostModal show={show} toggle={toggle} handleSubmit={handleSubmit} handleChange={handleChange} deletePost={deletePost} author={author} textbox={textbox} />
+              {({ show, toggle, handleSubmit, handleChange, deletePost, author, content }) => (
+                <EditPostModal show={show} toggle={toggle} handleSubmit={handleSubmit} handleChange={handleChange} deletePost={deletePost} author={author} content={content} />
               )}
             </EditPostToggle>
 
             <Link to="/view" className="btn btn-primary btn-lg ml-3" role="button">View</Link>
+            
           </div>
         </div>
       </div>

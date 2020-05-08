@@ -7,7 +7,7 @@ const findBlogById = 'SELECT * FROM blogs WHERE id  = ?;';
 
 
 // Adding Blogs
-const addBlog = 'INSERT INTO blogs (author, dates, text) VALUES (?, ?, ?);';
+const addBlog = 'INSERT INTO blogs (author, postDate, content) VALUES (?, ?, ?);';
 
 
 // Deleting Blogs
@@ -15,7 +15,7 @@ const deleteBlogById = 'DELETE FROM blogs WHERE id = ?;';
 
 // Updating Blogs
 const updateBlogCompletedById = 'UPDATE blogs SET completed = ? WHERE id = ?;';
-const updateBlogTextById = 'UPDATE blogs SET text = ? WHERE id = ?;';
+const updateBlogTextById = 'UPDATE blogs SET content = ? WHERE id = ?;';
 
 
 module.exports = {

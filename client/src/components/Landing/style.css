@@ -32,16 +32,17 @@ body {
   font-family: 'Lobster', cursive;
 }
 
-.btn {
-  border-radius: 4px;
+.btn, .cardbtn {
+  border-radius: 50px;
   background-color: slateblue;
   border: solid white;
   color: #FFFFFF;
   text-align: center;
   font-size: 20px;
-  padding: 10px;
-  width: 300px;
-  
+  padding: 5px;
+  width: 200px;
+  height: 45px;
+  position: sticky;
   transition: all 0.5s;
   cursor: pointer;
   margin: 5px;
@@ -51,8 +52,8 @@ body {
 
 .card {
   background: url(https://images.unsplash.com/photo-1557682268-e3955ed5d83f?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=486&q=80)!important;
-}
 
+}
 
 .top-form {
   margin-top: 5rem;
@@ -113,4 +114,23 @@ body {
 .container-fluid, .container-lg, .container-md, .container-sm, .container-xl {
   padding-left: 0px;
   padding-right: 0px;
+}
+
+.card-text {
+  min-height: 250px;
+  max-height: 500px;
+  color: whitesmoke;
+  white-space: wrap;
+  
+  overflow: hidden;
+  text-overflow: ellipsis;
+  
+}
+
+.modalTitle {
+  font-family: 'Lobster', cursive;
+}
+
+.modalAuthor {
+  
 }

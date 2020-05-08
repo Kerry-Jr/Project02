@@ -54,16 +54,16 @@ class App extends Component {
                 <Route exact path="/edit/:blogId" component={BlogCard} />
                 <Route exact path='/renderrecipes' component={RenderRecipes}/>
                 <Route exact path='/pokedex' component={Pokedex} />
-                <Route exact path='/renderrecipes' component={RenderRecipes}/>
+             
                 <Route exact path="/view" component={ViewPosts} />
                 {/* <Route exact path="/edit/:blogId" component={EditPost}/> */}
   
                 {/* animation components */}
-                <Component1 />
+                {/* <Component1 />
   
                 <Component2 toggle={this.toggle} />
 
-                <Component3 />
+                <Component3 /> */}
 
                 {/* <Transition
                   native

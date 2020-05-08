@@ -4,8 +4,8 @@ import axios from 'axios';
 class EditPostToggle extends Component {
 
   state = {
-    name: '',
-    textbox: '',
+    author: '',
+    content: '',
     show: false
   }
 
@@ -13,8 +13,8 @@ class EditPostToggle extends Component {
     if (this.state.show) {
       this.setState({
         show: !this.state.show,
-        textbox: '', 
-        name: ''
+        content: '', 
+        author: ''
       })
     } else {
       this.setState({
@@ -23,10 +23,10 @@ class EditPostToggle extends Component {
     }
   }
 
-  componentDidMount() {
-    // make an axios call to get blog post by id
-    // save author to name and bodytext to textbox inside this.state
-  }
+  // componentDidMount() {
+  //   // make an axios call to get blog post by id
+  //   // save author to name and bodytext to textbox inside this.state
+  // }
   
 
   handleInputChange = event => {
@@ -39,7 +39,7 @@ class EditPostToggle extends Component {
     event.preventDefault();
     console.log("You clicked the button!");
     try {
-      const { data } = await axios.post('/api/blogs', { text: this.state.textbox, author: this.state.name });
+      const { data } = await axios.post('/api/blogs', { content: this.state.content, author: this.state.author });
       // axios.patch request to update blog entry in database
       console.log(data)
       this.toggle();
@@ -56,7 +56,7 @@ class EditPostToggle extends Component {
   render() {
     return (
       <div>
-        <button onClick={this.toggle} className="btn btn-primary btn-lg ml-3">Edit Post</button>
+        <button onClick={this.toggle} className="btn btn-primary btn-lg ml-3 cardBtn">Edit Post</button>
         {this.props.children({
           show: this.state.show,
           toggle: this.toggle,
@@ -64,7 +64,7 @@ class EditPostToggle extends Component {
           handleChange: this.handleInputChange,
           deletePost: this.deletePost,
           author: this.state.author,
-          textbox: this.state.textbox
+          content: this.state.content
         })}
       </div>
     )
