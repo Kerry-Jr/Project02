@@ -7,19 +7,8 @@ import Pokedex from '../../containers/Pokedex'
 import PostFormContainer from '../../containers/PostFormContainer/index.js'
 import BlogCard from '../../containers/BlogUpdateCard'
 import RenderRecipes from '../../components/RenderRecipes'
-// import EditPost from '../EditPost'
-
-// import EditPost from '../EditPost'
-import EditPostModal from '../EditPostToggle'
-import ViewPosts from '../../containers/ViewPosts/ViewPosts'
-
-// animations example
-import Component1 from './../Component1';
-import Component2 from './../Component2';
-import Component3 from './../Component3';
-// need below to animate
-import { Spring, Transition, animated } from 'react-spring/renderprops';
-
+import ViewPosts from '../../containers/ViewPosts'
+import { Spring } from 'react-spring/renderprops';
 
 class App extends Component {
 
@@ -27,11 +16,6 @@ class App extends Component {
     showComponent3: false
   }
   
-  // this function isn't connected for some reason
-  // toggle = e => this.setState({ showComponent3: !this.state.showComponent3 });
-  
-
-
   render() {
     return (
       <Spring
@@ -48,38 +32,12 @@ class App extends Component {
               <Router>
                 <Navbar />
   
-                {/* <PostFormContainer /> */}
-  
                 <Route exact path="/" component={Landing} />
                 <Route exact path="/post" component={PostFormContainer} />
                 <Route exact path="/edit/:blogId" component={BlogCard} />
                 <Route exact path='/renderrecipes' component={RenderRecipes}/>
                 <Route exact path='/pokedex' component={Pokedex} />
                 <Route exact path="/view" component={ViewPosts} />
-                
-                {/* <Route exact path="/edit/:blogId" component={EditPost}/> */}
-  
-                {/* animation components */}
-                {/* <Component1 />
-  
-                <Component2 toggle={this.toggle} />
-
-                <Component3 /> */}
-
-                {/* <Transition
-                  native
-                  items={this.state.showComponent3}
-                  from={{ opacity: 0 }}
-                  enter={{ opacity: 1 }}
-                  leave={{ opacity: 0 }}
-                >
-                  {show => show && (props => (
-                    <animated.div style={props}>
-                      <Component3 />
-                    </animated.div>
-                  ))}
-
-                </Transition> */}
   
               </Router>
             </div>
@@ -87,11 +45,8 @@ class App extends Component {
         )}
   
       </Spring>
-  
-  
     )
   }
 }
-
 
 export default App;
