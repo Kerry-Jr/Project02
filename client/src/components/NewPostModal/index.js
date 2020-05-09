@@ -8,10 +8,10 @@ class NewPostModal extends Component {
     return (
       <Modal show={this.props.show} onHide={this.props.toggle}>
         <Modal.Header closeButton>
-          <Modal.Title>New Post</Modal.Title>
+          <Modal.Title className="formfont">New Post</Modal.Title>
         </Modal.Header>
-        <Modal.Body>
-          <form className="top-form">
+        <Modal.Body className="form-group">
+          <form>
             <div className="form-group">
               <label className="formfont">Name</label>
               <input
@@ -38,8 +38,8 @@ class NewPostModal extends Component {
           </form>
         </Modal.Body>
         <Modal.Footer>
-          <button onClick={this.props.toggle} className="btn btn-secondary cardBtn">Close</button>
-          <button onClick={this.props.handleSubmit} className="btn btn-primary btn-lg ml-3 cardBtn" type="submit">Post</button>
+          <button onClick={this.props.toggle} className="btn btn-secondary mr-4 cardBtn">Close</button>
+          <button onClick={this.props.handleSubmit} className="btn btn-primary mr-4 cardBtn" type="submit">Post</button>
         </Modal.Footer>
       </Modal>
     )

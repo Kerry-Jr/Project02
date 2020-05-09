@@ -8,6 +8,10 @@ body {
  
 }
 
+.formfont {
+  font-family: 'Lobster', cursive;
+}
+
 .hero-image {
   background: linear-gradient( rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),url('https://images.unsplash.com/photo-1505996000701-debaf9186e2d?ixlib=rb-1.2.1&auto=format&fit=crop&w=1352&q=80');
   height: 80rem;
@@ -131,6 +135,9 @@ body {
   font-family: 'Lobster', cursive;
 }
 
+.form-group {
+  background-image: url(https://images.unsplash.com/photo-1489549132488-d00b7eee80f1?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=934&q=80);
+}
 .modalAuthor {
   
 }
