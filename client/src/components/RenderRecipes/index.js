@@ -2,8 +2,7 @@ import React, { Component } from "react";
 import axios from "axios";
 const api_Key = "fa3502941336b2865937f7efea9a0b60";
 const api_ID = "3aaa0d6e";
-
-class RenderRecipes extends Component {
+class Recipes extends Component {
   state = {
     recipeTitle: "",
     recipeDetail: {},
@@ -14,7 +13,7 @@ class RenderRecipes extends Component {
     // event.preventDefault();
     console.log(api_Key , api_ID)
     try {
-      const { hits } = await axios.get(
+      const { data } = await axios.get(
         `https://api.edamam.com/search?q=${this.state.recipeTitle}&app_id=${api_ID}&app_key=${api_Key}`
       );
       // const body = JSON.stringify({
@@ -22,11 +21,12 @@ class RenderRecipes extends Component {
       //      content: data.get('recipeDetail'),
       //  });
       console.log('hello');
-      console.log(hits);
+      console.log(data.hits);
       this.setState({
-        recipeDetail: hits[0],
+        recipeDetail: data.hits[0],
         gotRecipe: true
       });
+      console.log("Recipe",this.state.gotRecipe, this.state.recipeDetail )
     } catch (e) {
       console.log(e);
     }
@@ -55,7 +55,6 @@ class RenderRecipes extends Component {
               value={this.state.recipeTitle}
               onChange={this.handleInput}
             />
-
             <button
               className="btn btn-lg btn-primary btn-block"
               onClick={this.getRecipe}
@@ -67,12 +66,14 @@ class RenderRecipes extends Component {
           {/* <Link to="/">{"RenderRecipes"}</Link> */}
           {/* <h4>{this.state.recipeTitle}</h4> */}
           {/* <img src={} /> */}
-          {this.state.gotRecipe && 
+          {this.state.gotRecipe ? (
             <div>
-              <h4>{this.state.recipeDetail["label"]}</h4>
-              <img src={this.state.recipeDetail["image"]} alt={this.state.recipeDetail["label"]} />
-              <a href={this.state.recipeDetail["url"]} target="_blank" rel="noopener noreferrer">{this.state.recipeDetail["url"]}</a>
+              <h4>{this.state.recipeDetail.recipe.label}</h4>
+              <img src={this.state.recipeDetail.recipe.image} alt={this.state.recipeDetail.recipe.labe} />
+              <a href={this.state.recipeDetail.recipe.url} target="_blank" rel="noopener noreferrer">{this.state.recipeDetail.recipe.url}</a>
             </div>
+          ): 
+          (<h3>No results display!!</h3>)
           }
         </div>
       </div>
@@ -87,5 +88,4 @@ class RenderRecipes extends Component {
 //   document.getElementById("app")
 // );
 //add a container DIV in HTML to render RenderRecipes Component
-
-export default RenderRecipes;
+export default Recipes;
