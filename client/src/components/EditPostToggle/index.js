@@ -73,13 +73,12 @@ class EditPostToggle extends Component {
   render() {
     return (
       <div>
-        <button onClick={this.toggle} className="btn btn-primary btn-lg ml-3 cardBtn">Edit Post</button>
+        <button onClick={this.toggle} className="btn btn-primary btn-lg cardBtn mt-0">Edit Post</button>
         {this.props.children({
           show: this.state.show,
           toggle: this.toggle,
           handleUpdate: this.handleUpdateText,
           handleChange: this.handleInputChange,
-          deletePost: this.deletePost,
           author: this.state.author,
           content: this.state.content,
           id: this.state.id

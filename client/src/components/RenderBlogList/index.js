@@ -25,7 +25,7 @@ const RenderBlogList = props => {
                     author={blog.author} 
                     content={blog.content} 
                     handleDelete={props.handleDelete} 
-                    // handleUpdateText={props.handleUpdateText} 
+                    // handleUpdateText={props.handleUpdateText}
                     id={blog.id}
                     updateBlogs={props.updateBlogs}
                     />

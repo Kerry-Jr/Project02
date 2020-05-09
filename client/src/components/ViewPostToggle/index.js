@@ -16,7 +16,7 @@ class ViewPostToggle extends Component {
   render() {
     return (
       <div>
-        <button onClick={this.toggle} className="btn btn-primary btn-lg ml-3 cardBtn">View Post</button>
+        <button onClick={this.toggle} className="btn btn-primary btn-lg cardBtn">View Post</button>
         {this.props.children({
           show: this.state.show,
           toggle: this.toggle

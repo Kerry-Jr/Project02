@@ -24,12 +24,6 @@ class Landing extends Component {
               )}
             </NewPostToggle>
 
-            <EditPostToggle>
-              {({ show, toggle, handleSubmit, handleChange, deletePost, author, content }) => (
-                <EditPostModal show={show} toggle={toggle} handleSubmit={handleSubmit} handleChange={handleChange} deletePost={deletePost} author={author} content={content} />
-              )}
-            </EditPostToggle>
-
             <Link to="/view" className="btn btn-primary btn-lg ml-3" role="button">View</Link>
             
           </div>
