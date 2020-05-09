@@ -9,8 +9,6 @@ import Col from 'react-bootstrap/Col';
 import './style.css';
 
 
-
-
 const RenderBlogList = props => {
   const renderBlogListItems = () => {
     console.log(props)
@@ -19,7 +17,6 @@ const RenderBlogList = props => {
       } else {
       return props.items.map(blog => {
         return (
-              // <Col span={4}>
                 <div className='blogDiv' key={blog.id}>
                     <BlogCardBoot 
                     author={blog.author} 
@@ -30,8 +27,6 @@ const RenderBlogList = props => {
                     updateBlogs={props.updateBlogs}
                     />
                 </div>
-              // </Col>
-// title={blog.title} image={blog.image}
         )
       });
     }

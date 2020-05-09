@@ -9,6 +9,7 @@ import Col from 'react-bootstrap/Col';
 
 import './../../components/Landing/style.css';
 
+import './blogCardBoot.css';
 
 
 const BlogCardBoot = (props) => {
