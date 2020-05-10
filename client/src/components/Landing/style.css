@@ -38,7 +38,7 @@ body {
 
 .btn, .cardbtn {
   border-radius: 50px;
-  background-color: slateblue;
+  background-color: #D2691E;
   border: solid white;
   color: #FFFFFF;
   text-align: center;
@@ -79,7 +79,7 @@ body {
 } */
 
 
-.animated {
+/* .animated {
   
   background-repeat: no-repeat;
  
@@ -98,7 +98,7 @@ body {
 @keyframes fadeIn {
   0% {opacity: 0;}
   100% {opacity: 1;}
-}
+} */
 
 .fadeIn {
   -webkit-animation-name: fadeIn;
@@ -150,4 +150,17 @@ body {
   background-position: center;
   background-size: cover;
   background-attachment: fixed;
+}
+
+.blogContainer {
+  margin-top: 7rem;
+}
+
+.cardLayout {
+  width: 70%;
+
+}
+
+.delta {
+  margin-top: 7rem;
 }
