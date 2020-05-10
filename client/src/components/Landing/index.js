@@ -3,8 +3,6 @@ import { withRouter, Link } from 'react-router-dom';
 import './../Landing/style.css';
 import NewPostModal from '../NewPostModal';
 import NewPostToggle from '../NewPostToggle';
-import EditPostModal from '../EditPostModal';
-import EditPostToggle from '../EditPostToggle';
 
 
 class Landing extends Component {
@@ -15,8 +13,8 @@ class Landing extends Component {
       <div>
         <div className="hero-image">
           <div className="hero-text">
-            <h1 className="animated fadeIn" id="animated-example">Hi Im a new blog site </h1>
-            <p className="animated fadeIn" id="animated-example">and I'm a paragraph tag</p>
+            <h1>Hi Im a new blog site </h1>
+            <p>and I'm a paragraph tag</p>
        
             <NewPostToggle>
               {({ show, toggle, handleSubmit, handleChange, author, content }) => (

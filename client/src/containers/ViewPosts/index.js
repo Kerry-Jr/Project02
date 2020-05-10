@@ -52,7 +52,7 @@ class ViewPosts extends Component {
                   test={this.state.sample}
                   items={this.state.blogs}
                   handleDelete={this.handleDeleteBlog}
-                  handleUpdateBlog={this.handleUpdateText} />
+                  updateBlogs={this.updateBlogs} />
               </Col>
             </Row>
           </Container>
