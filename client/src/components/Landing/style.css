@@ -16,7 +16,7 @@ body {
   background: linear-gradient( rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),url('https://images.unsplash.com/photo-1505996000701-debaf9186e2d?ixlib=rb-1.2.1&auto=format&fit=crop&w=1352&q=80');
   height: 80rem;
   background-size: cover;
-  opacity: 79%;
+  /*opacity: 79%;*/
   /* border-radius: 2rem; */
 
   
