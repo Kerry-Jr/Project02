@@ -26,6 +26,10 @@ class Recipes extends Component {
       );
       console.log("hello");
       console.log(data.hits);
+      if(data.more === false){
+        this.setState({ gotRecipe: false })
+        return
+      }
       
       this.setState({
         recipeDetail: data.hits[0],
