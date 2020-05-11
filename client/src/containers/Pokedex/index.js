@@ -78,22 +78,21 @@ class Pokedex extends Component {
 
 
 
-        <div class="card text-center">
-  <div class="card-header">
+        <div className="card text-center">
+  <div className="card-header">
     Featured
   </div>
-  <div class="card-body">
-    <h5 class="card-title">Pokedex</h5>
-    <p class="card-text">Enter the name of a Pokemon you want more information on.</p>
+  <div className="card-body">
+    <h5 className="card-title">Pokedex</h5>
+    <p className="card-text">Enter the name of a Pokemon you want more information on.</p>
     <input
           name="pokemonInput"
           value={this.state.pokemonInput}
           onChange={this.handleInput}
           />
-          {/* <button onClick={(e) => this.handleSubmit(e)}><Link>Look up Pokemon</Link></button> */}
-          <button class="btn btn-primary" onClick={(e) => this.handleSubmit(e)}>Look up Pokemon</button>
+          <button className="btn btn-primary" onClick={(e) => this.handleSubmit(e)}>Look up Pokemon</button>
   </div>
-  <div class="card-footer text-muted">
+  <div className="card-footer text-muted">
   </div>
 </div>
 
