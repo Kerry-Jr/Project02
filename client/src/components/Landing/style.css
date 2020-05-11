@@ -1,30 +1,35 @@
 body {
-  background-color: rgb(255, 255, 255);
+  background-color: #000000;
+  background: linear-gradient( rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),url('./../../assets/image/landingpage.jpg');
+ 
+  background-size: cover;
+  background-attachment: fixed;
+  /* position: absolute; */
 }
 
 .navbar {
   background-color: rgb(39, 41, 39) !important;
-  
- 
+
 }
+
+
+
 
 .formfont {
   font-family: 'Lobster', cursive;
 }
 
 .hero-image {
-  background: linear-gradient( rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),url('https://images.unsplash.com/photo-1505996000701-debaf9186e2d?ixlib=rb-1.2.1&auto=format&fit=crop&w=1352&q=80');
+  
   height: 80rem;
   background-size: cover;
-  /*opacity: 79%;*/
-  /* border-radius: 2rem; */
 
-  
 }
 
-/* https://images.unsplash.com/photo-1557683311-eac922347aa1?ixlib=rb-1.2.1&auto=format&fit=crop&w=1315&q=80 this is the original image address */
+.blog-title {
+  font-size: 150px;
 
-/* the blue mountains back  https://images.unsplash.com/photo-1505996000701-debaf9186e2d?ixlib=rb-1.2.1&auto=format&fit=crop&w=1352&q=80*/
+}
 
 .hero-text {
   text-align: center;
@@ -34,11 +39,12 @@ body {
   transform: translate(-50%, -50%);
   color: whitesmoke;
   font-family: 'Lobster', cursive;
+  /* font-size: 5rem; */
 }
 
 .btn, .cardbtn {
-  border-radius: 50px;
-  background-color: #D2691E;
+  border-radius: 30px;
+  background-color: rgb(69, 159, 243);
   border: solid white;
   color: #FFFFFF;
   text-align: center;
@@ -55,7 +61,7 @@ body {
 }
 
 .card {
-  background: url(https://images.unsplash.com/photo-1557682268-e3955ed5d83f?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=486&q=80)!important;
+  background-color: antiquewhite;
 
 }
 
@@ -67,43 +73,7 @@ body {
   font-family: 'Lobster', cursive;
   
 }
-/* .form-group {
-  background-image: url(https://images.unsplash.com/photo-1485498128961-422168ba5f87?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=2002&q=80);
-  background-size: cover;
-  height: 80rem;
-  background-size: cover;
-  opacity: 90%;
-  border-radius: 2rem;
-  margin-top: 7.5rem;
-  position: -webkit-sticky;
-} */
 
-
-/* .animated {
-  
-  background-repeat: no-repeat;
- 
- 
-  -webkit-animation-duration: 10s;
-  animation-duration: 7s;
-  -webkit-animation-fill-mode: both;
-  animation-fill-mode: both;
-}
-
-@-webkit-keyframes fadeIn {
-  0% {opacity: 0;}
-  100% {opacity: 1;}
-}
-
-@keyframes fadeIn {
-  0% {opacity: 0;}
-  100% {opacity: 1;}
-} */
-
-.fadeIn {
-  -webkit-animation-name: fadeIn;
-  animation-name: fadeIn;
-}
 
 .blogListItems {
   margin-top: 5rem;
@@ -112,7 +82,8 @@ body {
 
 .card-subtitle {
   color: whitesmoke;
-  font-family: 'Muli', sans-serif;
+  font-family: 'Lobster', cursive;
+  margin-bottom: 20px;
 }
 
 .container-fluid, .container-lg, .container-md, .container-sm, .container-xl {
@@ -123,44 +94,74 @@ body {
 .card-text {
   min-height: 250px;
   max-height: 500px;
-  color: whitesmoke;
+  color: black;
   white-space: wrap;
-  
+  padding-top: 40px;
   overflow: hidden;
   text-overflow: ellipsis;
-  
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+ 
 }
 
-.modalTitle {
+.modalTitle, .card-title, .modal-title {
   font-family: 'Lobster', cursive;
+  /* font-size: 40px; */
 }
 
 .form-group {
-  background-image: url(https://images.unsplash.com/photo-1489549132488-d00b7eee80f1?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=934&q=80);
-}
+
+} 
 .modalAuthor {
-  
+  color: black;
 }
 .pokedexForm {
   margin-top: 5rem;
 }
 
-.viewPostsImage {
-  background-image: url('https://images.unsplash.com/photo-1534190938029-2d03c3bec5fe?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=2550&q=80');
+/* .viewPostsImage {
+  
   background-position: center;
   background-size: cover;
   background-attachment: fixed;
-}
+} */
 
 .blogContainer {
   margin-top: 7rem;
+  
+  
 }
 
 .cardLayout {
   width: 70%;
-
+ 
 }
 
 .delta {
   margin-top: 7rem;
+
 }
+
+.card:hover {
+  transform: scale(1.05);
+}
+
+.card {
+  transition: all ease 200ms;
+  /* border-bottom-right-radius: 100px !important; */
+  border-radius: 30px !important;
+  background-color: rgb(255, 255, 255) !important;
+  opacity: 0.75;
+  
+}
+
+
+.underline {
+  border-bottom: 1px solid black;
+  padding-top: 15px;
+}
+
+.card-subtitle {
+  color: black;
+  
+}
+

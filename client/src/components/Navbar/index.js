@@ -8,7 +8,7 @@ const Navbar = () => (
       <div className='row no-gutters'>
         <div className='col-12'>
           <nav className="navbar navbar-expand-lg navbar-dark bg-light fixed-top">
-            <Link className="navbar-brand" to="/">The Ctrl-Alt-Delete club </Link>
+            <Link className="navbar-brand" to="/">Blog Site </Link>
             <button className="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
               <span className="navbar-toggler-icon"></span>
             </button>
@@ -20,16 +20,14 @@ const Navbar = () => (
                 <li className="nav-item">
                   <Link className="nav-link" to="/view">Latest Blog/Post</Link>
                 </li>
-                <li className="nav-item">
-                  <Link className="nav-link" to="/renderRecipes">Recipe Search</Link>
-                </li>
+               
                 <li className="nav-item dropdown">
                   <Link className="nav-link dropdown-toggle" to="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                     Time Waster
                       </Link>
                   <div className="dropdown-menu" aria-labelledby="navbarDropdown">
                     <Link className="dropdown-item" to="/pokedex">The Pokedex</Link>
-                    <Link className="dropdown-item" to="#">Guess the magic number</Link>
+                    <Link className="dropdown-item" to="/renderRecipes">Recipe Search</Link>
                     <div className="dropdown-divider"></div>
                   </div>
                 </li>

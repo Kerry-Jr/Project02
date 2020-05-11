@@ -48,7 +48,7 @@ class NewPostToggle extends Component {
   render() {
     return (
       <div>
-        <button onClick={this.toggle} className="btn btn-primary btn-lg ml-3">New Post</button>
+        <button onClick={this.toggle} className="btn btn-primary btn-lg ml-3"><i class="fa fa-pencil" aria-hidden="true"></i>&nbsp;&nbsp;New Post</button>
         {this.props.children({
           show: this.state.show,
           toggle: this.toggle,
