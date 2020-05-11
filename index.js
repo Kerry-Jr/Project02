@@ -3,6 +3,9 @@ const express = require('express');
 // If we require a folder in Node and we don't specify a file name
 // Node will automatically look for an index.js inside of that folder
 const routes = require('./routes');
+require('dotenv').config();
+
+console.log(process.env);
 
 const PORT = process.env.PORT || 3001;
 
