@@ -8,8 +8,8 @@ import RecipeCard from "../RecipeCard";
 // const api_Key = "fa3502941336b2865937f7efea9a0b60";
 // const api_ID = "3aaa0d6e";
 
-const api_Key = process.env.api_Key;
-const api_ID = process.env.api_ID;
+const api_key = process.env.API_KEY;
+const api_id = process.env.API_ID;
 
 
 
@@ -30,7 +30,7 @@ class Recipes extends Component {
     console.log(api_Key, api_ID);
     try {
       const { data } = await axios.get(
-        `https://api.edamam.com/search?q=${this.state.recipeTitle}&app_id=${api_ID}&app_key=${api_Key}`
+        `https://api.edamam.com/search?q=${this.state.recipeTitle}&app_id=${api_id}&app_key=${api_key}`
       );
       console.log("hello");
       console.log(data.hits);
