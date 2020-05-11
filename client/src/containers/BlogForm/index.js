@@ -1,7 +1,5 @@
 import React, { Component } from 'react';
-import { withRouter } from 'react-router-dom';
 import axios from 'axios';
-
 import RenderBlogList from '../../components/RenderBlogList';
 
 class BlogForm extends Component {
@@ -28,7 +26,7 @@ class BlogForm extends Component {
   handleSubmit = async event => {
     event.preventDefault();
     try {
-      const { data } = await axios.post('/api/blogs', {text: this.state.blogInput });
+      const { data } = await axios.post('/api/blogs', { text: this.state.blogInput });
       const blogs = [...this.state.blogs, data];
       this.setState({ blogs, blogInput: '' });
     } catch (e) {
@@ -47,7 +45,7 @@ class BlogForm extends Component {
 
   handleUpdateText = async event => {
     try {
-      const { data } = await axios.patch(`/api/blogs/${this.props.match.params.blogId}`, { text: this.state.blogInput }); // <get data from back end
+      const { data } = await axios.patch(`/api/blogs/${this.props.match.params.blogId}`, { text: this.state.blogInput });
       this.setState({ blogs: data, text: '' });
     } catch (e) {
       console.log(e);
@@ -55,14 +53,12 @@ class BlogForm extends Component {
   }
 
   render() {
-    console.log("I rendered inside of Form");
-    console.log(this.props);
     return (
       <div>
         <RenderBlogList
           items={this.state.blogs}
           handleUpdateText={this.handleUpdateText}
-          handleDelete={this.handleDeleteBlog}/>
+          handleDelete={this.handleDeleteBlog} />
         <form>
           <input
             name="blogInput"

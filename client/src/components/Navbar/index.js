@@ -22,7 +22,7 @@ const Navbar = () => (
                 </li>
                 <li className="nav-item dropdown">
                   <Link className="nav-link dropdown-toggle" to="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                    Time Waster
+                    Activities
                       </Link>
                   <div className="dropdown-menu" aria-labelledby="navbarDropdown">
                     <Link className="dropdown-item" to="/pokedex">The Pokedex</Link>

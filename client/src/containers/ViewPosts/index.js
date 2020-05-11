@@ -1,17 +1,10 @@
 import React, { Component } from 'react';
 import RenderBlogList from '../../components/RenderBlogList'
 import axios from 'axios';
-import DisplayPost from '../../components/DisplayPost';
 import './../../components/Landing/style.css';
 import Container from 'react-bootstrap/Container';
 import Row from 'react-bootstrap/Row';
 import Col from 'react-bootstrap/Col';
-
-
-
-
-
-
 
 class ViewPosts extends Component {
   state = {
@@ -20,7 +13,6 @@ class ViewPosts extends Component {
   }
 
   async componentDidMount() {
-    console.log("Inside componentDidMount");
     this.updateBlogs();
   }
   updateBlogs = async () => {
@@ -41,7 +33,6 @@ class ViewPosts extends Component {
   }
 
   render() {
-    console.log(this.state)
     return (
       <div>
         <div className="viewPostsImage">
