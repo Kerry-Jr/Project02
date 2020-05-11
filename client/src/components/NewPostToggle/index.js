@@ -13,7 +13,7 @@ class NewPostToggle extends Component {
     if (this.state.show) {
       this.setState({
         show: !this.state.show,
-        content: '', 
+        content: '',
         author: ''
       })
     } else {
@@ -31,18 +31,16 @@ class NewPostToggle extends Component {
 
   handleFormSubmit = async event => {
     event.preventDefault();
-    console.log("You clicked the button!");
-    if(!this.state.author || !this.state.content){
+    if (!this.state.author || !this.state.content) {
       alert("Please fill something out.");
     } else {
       try {
         const { data } = await axios.post('/api/blogs', { content: this.state.content, author: this.state.author });
-        console.log(data)
         this.toggle();
       } catch (e) {
         console.log(e);
       }
-    } 
+    }
   }
 
   render() {
@@ -61,6 +59,5 @@ class NewPostToggle extends Component {
     )
   }
 }
-
 
 export default NewPostToggle;

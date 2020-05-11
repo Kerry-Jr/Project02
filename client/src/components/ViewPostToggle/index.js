@@ -1,18 +1,14 @@
 import React, { Component } from 'react';
-import axios from 'axios';
 
 class ViewPostToggle extends Component {
-
   state = {
     show: false
   }
-
   toggle = () => {
     this.setState({
       show: !this.state.show,
     })
   }
-
   render() {
     return (
       <div>
@@ -25,6 +21,5 @@ class ViewPostToggle extends Component {
     )
   }
 }
-
 
 export default ViewPostToggle;

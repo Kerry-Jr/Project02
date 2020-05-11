@@ -2,8 +2,6 @@ import React, { Component } from 'react';
 import Modal from "react-bootstrap/Modal"
 
 class NewPostModal extends Component {
-  
-  
   render() {
     return (
       <Modal show={this.props.show} onHide={this.props.toggle}>

@@ -25,8 +25,6 @@ class EditPostToggle extends Component {
   }
 
   componentDidMount() {
-    // make an axios call to get blog post by id
-    // save author to name and bodytext to textbox inside this.state
     this.setState({
       author: this.props.author,
       content: this.props.content,
@@ -34,7 +32,6 @@ class EditPostToggle extends Component {
     })
   }
   
-
   handleInputChange = event => {
     const name = event.target.name;
     const value = event.target.value;
@@ -46,23 +43,15 @@ class EditPostToggle extends Component {
     console.log("You clicked the button!");
     try {
       const { data } = await axios.post('/api/blogs', { content: this.state.content, author: this.state.author });
-      // axios.patch request to update blog entry in database
-      console.log(data)
       this.toggle();
     } catch (e) {
       console.log(e);
     }
   }
 
-  // deletePost = event => {
-  //   // axios call to delete blog entry from db by its id
-  //   console.log(event);
-  // }
   handleUpdateText = async id => {
-    console.log(id);
     try {
       const { data } = await axios.patch(`/api/blogs/${id}`, { content: this.state.content });
-      console.log(data);
       this.toggle();
       this.props.updateBlogs();
       this.setState({ content: data.content, author: data.author, id: data.id });

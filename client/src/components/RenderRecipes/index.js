@@ -5,15 +5,8 @@ import Container from "react-bootstrap/Container";
 import Row from "react-bootstrap/Row";
 import Col from "react-bootstrap/Col";
 import RecipeCard from "../RecipeCard";
-// const api_Key = "fa3502941336b2865937f7efea9a0b60";
-// const api_ID = "3aaa0d6e";
-
-const api_key = process.env.API_KEY;
-const api_id = process.env.API_ID;
-
-
-
-
+const api_Key = "fa3502941336b2865937f7efea9a0b60";
+const api_ID = "3aaa0d6e";
 
 class Recipes extends Component {
   state = {
@@ -23,49 +16,35 @@ class Recipes extends Component {
     recipeThreeDetail: {},
     gotRecipe: false,
   };
-  //Define onclick method to display recipes
+
   getRecipe = async event => {
     event.preventDefault();
 
-    // console.log(api_Key, api_ID);
+
     try {
       const { data } = await axios.get(
-        `https://api.edamam.com/search?q=${this.state.recipeTitle}&app_id=${api_id}&app_key=${api_key}`
+        `https://api.edamam.com/search?q=${this.state.recipeTitle}&app_id=${api_ID}&app_key=${api_Key}`
       );
-      console.log("hello");
-      console.log(data.hits);
       if (data.more === false) {
         this.setState({ gotRecipe: false })
         return
       }
-
       this.setState({
         recipeDetail: data.hits[0],
         recipeTwoDetail: data.hits[1],
         recipeThreeDetail: data.hits[2],
         gotRecipe: true,
       });
-
-      console.log(
-        "Recipe",
-        this.state.gotRecipe,
-        this.state.recipeDetail,
-        this.state.recipeTwoDetail
-      );
     } catch (e) {
       console.log(e);
     }
-   
+
   };
   handleInput = (event) => {
     const { value, name } = event.target;
-    console.log(name, value);
-    console.log("HELLO");
-    // console.log(api_ID);
-    // console.log(api_Key);
     this.setState({ [name]: value });
   };
- 
+
   render() {
     return (
       <Container>
