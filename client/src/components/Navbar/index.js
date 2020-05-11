@@ -20,7 +20,6 @@ const Navbar = () => (
                 <li className="nav-item">
                   <Link className="nav-link" to="/view">Latest Blog/Post</Link>
                 </li>
-               
                 <li className="nav-item dropdown">
                   <Link className="nav-link dropdown-toggle" to="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                     Time Waster

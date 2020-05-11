@@ -9,7 +9,7 @@ body {
 
 .navbar {
   background-color: rgb(39, 41, 39) !important;
-
+ 
 }
 
 
@@ -21,15 +21,29 @@ body {
 
 .hero-image {
   
-  height: 80rem;
+  height: 100rem;
   background-size: cover;
 
 }
 
 .blog-title {
-  font-size: 150px;
+  font-size: 6rem;
 
 }
+
+.blog-subtitle {
+  font-size: 1rem;
+}
+
+
+@media all and (max-width: 768px){
+  .blog-title {
+    font-size: 3rem;
+    
+  }
+   
+}
+
 
 .hero-text {
   text-align: center;
@@ -164,4 +178,9 @@ body {
   color: black;
   
 }
+
+
+
+
+
 

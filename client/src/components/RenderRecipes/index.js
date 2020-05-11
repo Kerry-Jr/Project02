@@ -5,8 +5,15 @@ import Container from "react-bootstrap/Container";
 import Row from "react-bootstrap/Row";
 import Col from "react-bootstrap/Col";
 import RecipeCard from "../RecipeCard";
-const api_Key = "fa3502941336b2865937f7efea9a0b60";
-const api_ID = "3aaa0d6e";
+// const api_Key = "fa3502941336b2865937f7efea9a0b60";
+// const api_ID = "3aaa0d6e";
+
+const api_Key = process.env.api_Key;
+const api_ID = process.env.api_ID;
+
+
+
+
 
 class Recipes extends Component {
   state = {
@@ -19,7 +26,7 @@ class Recipes extends Component {
   //Define onclick method to display recipes
   getRecipe = async event => {
     event.preventDefault();
-   
+
     console.log(api_Key, api_ID);
     try {
       const { data } = await axios.get(
@@ -27,18 +34,18 @@ class Recipes extends Component {
       );
       console.log("hello");
       console.log(data.hits);
-      if(data.more === false){
+      if (data.more === false) {
         this.setState({ gotRecipe: false })
         return
       }
-      
+
       this.setState({
         recipeDetail: data.hits[0],
         recipeTwoDetail: data.hits[1],
         recipeThreeDetail: data.hits[2],
         gotRecipe: true,
       });
-      
+
       console.log(
         "Recipe",
         this.state.gotRecipe,
@@ -48,18 +55,17 @@ class Recipes extends Component {
     } catch (e) {
       console.log(e);
     }
-    // alert('' + + '' + this.state.getRecipe);
-    //define axios
+   
   };
   handleInput = (event) => {
     const { value, name } = event.target;
     console.log(name, value);
+    console.log("HELLO");
+    console.log(api_ID);
+    console.log(api_Key);
     this.setState({ [name]: value });
   };
-  // componentDidMount() {
-  //   console.log("i mounted");
-  //   // const recipe = this.state.recipeDetail;
-  // }
+ 
   render() {
     return (
       <Container>
@@ -93,7 +99,6 @@ class Recipes extends Component {
               </div>
             </div>
           </Col>
-
           <Col md="auto">
             {this.state.gotRecipe ? (
               <RecipeCard
@@ -129,12 +134,5 @@ class Recipes extends Component {
     );
   }
 }
-//DOMRouter
-// render(
-//   <Router history={hashHistory}>
-//     <Route component={RenderRecipes} path="/"></Route>
-//   </Router>,
-//   document.getElementById("app")
-// );
-//add a container DIV in HTML to render RenderRecipes Component
+
 export default Recipes;
