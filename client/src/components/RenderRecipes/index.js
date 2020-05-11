@@ -27,7 +27,7 @@ class Recipes extends Component {
   getRecipe = async event => {
     event.preventDefault();
 
-    console.log(api_Key, api_ID);
+    // console.log(api_Key, api_ID);
     try {
       const { data } = await axios.get(
         `https://api.edamam.com/search?q=${this.state.recipeTitle}&app_id=${api_id}&app_key=${api_key}`
@@ -61,8 +61,8 @@ class Recipes extends Component {
     const { value, name } = event.target;
     console.log(name, value);
     console.log("HELLO");
-    console.log(api_ID);
-    console.log(api_Key);
+    // console.log(api_ID);
+    // console.log(api_Key);
     this.setState({ [name]: value });
   };
  
