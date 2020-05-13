@@ -1,19 +1,16 @@
 body {
   background-color: #000000;
-  background: linear-gradient( rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),url('./../../assets/image/landingpage.jpg');
+  background: linear-gradient( rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),url('./../images/landingpage.jpg');
  
   background-size: cover;
   background-attachment: fixed;
-  /* position: absolute; */
+ 
 }
 
 .navbar {
   background-color: rgb(39, 41, 39) !important;
  
 }
-
-
-
 
 .formfont {
   font-family: 'Lobster', cursive;
@@ -35,15 +32,12 @@ body {
   font-size: 1rem;
 }
 
-
 @media all and (max-width: 768px){
   .blog-title {
     font-size: 3rem;
-    
   }
    
 }
-
 
 .hero-text {
   text-align: center;
@@ -70,13 +64,10 @@ body {
   transition: all 0.5s;
   cursor: pointer;
   margin: 5px;
- 
-  
 }
 
 .card {
   background-color: antiquewhite;
-
 }
 
 .top-form {
@@ -87,7 +78,6 @@ body {
   font-family: 'Lobster', cursive;
   
 }
-
 
 .blogListItems {
   margin-top: 5rem;
@@ -114,7 +104,6 @@ body {
   overflow: hidden;
   text-overflow: ellipsis;
   font-family: Verdana, Geneva, Tahoma, sans-serif;
- 
 }
 
 .modalTitle, .card-title, .modal-title {
@@ -122,9 +111,6 @@ body {
   /* font-size: 40px; */
 }
 
-.form-group {
-
-} 
 .modalAuthor {
   color: black;
 }
@@ -132,27 +118,17 @@ body {
   margin-top: 5rem;
 }
 
-/* .viewPostsImage {
-  
-  background-position: center;
-  background-size: cover;
-  background-attachment: fixed;
-} */
 
 .blogContainer {
   margin-top: 7rem;
-  
-  
 }
 
 .cardLayout {
   width: 70%;
- 
 }
 
 .delta {
   margin-top: 7rem;
-
 }
 
 .card:hover {
@@ -161,13 +137,11 @@ body {
 
 .card {
   transition: all ease 200ms;
-  /* border-bottom-right-radius: 100px !important; */
   border-radius: 30px !important;
   background-color: rgb(255, 255, 255) !important;
   opacity: 0.75;
   
 }
-
 
 .underline {
   border-bottom: 1px solid black;
@@ -176,11 +150,4 @@ body {
 
 .card-subtitle {
   color: black;
-  
 }
-
-
-
-
-
-

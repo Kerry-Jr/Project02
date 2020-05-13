@@ -1,8 +1,8 @@
 import React, { Component } from 'react';
 import { BrowserRouter as Router, Route } from 'react-router-dom';
 import Navbar from '../Navbar';
-import Landing from '../Landing/index.js';
-import './../../components/Landing/style.css'
+import Landing from './../Landing';
+import './../../assets/css/style.css';
 import Pokedex from '../../containers/Pokedex'
 import PostFormContainer from '../../containers/PostFormContainer/index.js'
 import BlogCard from '../../containers/BlogUpdateCard'

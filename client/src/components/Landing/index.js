@@ -1,6 +1,6 @@
 import React, { Component } from 'react'
 import { withRouter, Link } from 'react-router-dom';
-import './../Landing/style.css';
+import './../../assets/css/style.css';
 import NewPostModal from '../NewPostModal';
 import NewPostToggle from '../NewPostToggle';
 

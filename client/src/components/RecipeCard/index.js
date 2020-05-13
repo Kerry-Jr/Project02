@@ -1,7 +1,7 @@
 import React from "react";
 import { Link } from "react-router-dom";
 import Col from "react-bootstrap/Col";
-import "./../RenderRecipes/style.css"
+import './../../assets/css/style.css';
 
 const RecipeCard = (props) => {
   return (
