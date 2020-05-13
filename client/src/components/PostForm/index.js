@@ -1,5 +1,5 @@
 import React from 'react';
-import './../../components/Landing/style.css';
+import './../../assets/css/style.css';
 
 
 function PostForm(props) {

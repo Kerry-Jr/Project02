@@ -4,7 +4,7 @@ import PokemonCard from "../PokemonCard"
 import Grid from 'react-bootstrap/Container';
 import Row from 'react-bootstrap/Row';
 import Col from 'react-bootstrap/Col';
-import './../../components/Landing/style.css'
+import './../../assets/css/style.css';
 
 class Pokedex extends Component {
   state = {

@@ -3,7 +3,7 @@ import ViewPostToggle from './../ViewPostToggle';
 import ViewPostModal from './../ViewPostModal';
 import EditPostToggle from './../EditPostToggle';
 import EditPostModal from './../EditPostModal';
-import './../../components/Landing/style.css';
+import './../../assets/css/style.css';
 
 const BlogCardBoot = (props) => {
   return (
@@ -49,5 +49,9 @@ const BlogCardBoot = (props) => {
     </div>
   );
 };
+
+
+
+
 
 export default BlogCardBoot;

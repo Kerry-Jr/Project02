@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import RenderBlogList from '../../components/RenderBlogList'
 import axios from 'axios';
-import './../../components/Landing/style.css';
+import './../../assets/css/style.css';
 import Container from 'react-bootstrap/Container';
 import Row from 'react-bootstrap/Row';
 import Col from 'react-bootstrap/Col';
