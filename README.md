@@ -21,7 +21,8 @@
 - Scott Whitney https://github.com/scott-whitney
 - Jernice Duncan https://github.com/jerniceduncan
 ​
-​
+# <span style="color: #459ff3;">**Installation**</span>
+- npm i​
 ​
  # <span style="color: #459ff3;">[**Click Here To Demo Our Project**](https://project02blog.herokuapp.com/)
 ​
