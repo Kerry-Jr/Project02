@@ -8,7 +8,7 @@ const RecipeCard = (props) => {
     <div>
       <div>
         <a href={props.address}>
-          <div className="card delta fluid">
+          <div className="card fluid delta">
             <div className="card-body">
               <h5 className="card-title">{props.food}</h5>
               <h6 className="card-subtitle mb-2 text-muted">Estimated Time: {props.type}</h6>
